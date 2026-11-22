@@ -14,7 +14,6 @@
 </head>
 
 <body>
-    
     <main>
         <!-- Banner Principal -->
         <section class="bannerprincipal">
@@ -144,8 +143,6 @@
             </div>
         </section>
     </main>
-
-
 </body>
 
 </html>

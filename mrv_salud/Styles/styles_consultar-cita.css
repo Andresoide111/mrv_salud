@@ -1,0 +1,191 @@
+:root {
+    --primary_color: #17313B;
+    --btn_main: #0F7772;
+    --btn_principal: #168C86;
+    --bg_color: #F4F5F0;
+    --surface_color: #ffffff;
+    --text_color: #0f172a;
+    --text_muted: #63767C;
+    --color_claro: #e2e8f0;
+    --shadow_sm: 0 1px 3px rgba(62, 45, 45, 0.1);
+    --radius: 8px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg_color);
+    color: var(--text_color);
+    font-family: "Segoe UI", system-ui, sans-serif;
+    line-height: 1.5;
+}
+
+.pagina-consultar-cita {
+    width: min(1000px, calc(100% - 2rem));
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+.encabezado-pagina {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.encabezado-pagina h1 {
+    margin: 0 0 0.5rem;
+    color: var(--primary_color);
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.encabezado-pagina p {
+    margin: 0;
+    color: var(--text_muted);
+}
+
+.consulta-layout {
+    display: grid;
+    grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.4fr);
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.consulta-formulario,
+.cita-resultado {
+    padding: clamp(1.25rem, 3vw, 2rem);
+    border: 1px solid var(--color_claro);
+    border-radius: var(--radius);
+    background: var(--surface_color);
+    box-shadow: var(--shadow_sm);
+}
+
+.consulta-formulario h2,
+.cita-resultado h2 {
+    margin: 0 0 1.25rem;
+    color: var(--primary_color);
+    font-size: 1.2rem;
+}
+
+.campo {
+    display: grid;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+}
+
+.campo label {
+    color: var(--primary_color);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.campo input {
+    width: 100%;
+    min-height: 46px;
+    padding: 0.7rem 0.8rem;
+    border: 1px solid #cbd5d8;
+    border-radius: 6px;
+    background: #fff;
+    color: var(--text_color);
+    font: inherit;
+}
+
+.campo input:focus {
+    outline: 3px solid rgba(22, 140, 134, 0.2);
+    border-color: var(--btn_principal);
+}
+
+.boton {
+    display: inline-flex;
+    min-height: 46px;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem 1.2rem;
+    border: 0;
+    border-radius: 6px;
+    background: var(--btn_principal);
+    color: #fff;
+    font: inherit;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background: var(--btn_main);
+}
+
+.consulta-formulario .boton {
+    width: 100%;
+}
+
+.cita-resultado[hidden] {
+    display: none;
+}
+
+.cita-resultado p {
+    margin: 0.4rem 0;
+    color: var(--text_muted);
+}
+
+.cita-detalles {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 1.25rem 0 0;
+}
+
+.cita-detalles div {
+    padding: 1rem;
+    border-radius: 6px;
+    background: #f7f9f8;
+}
+
+.cita-detalles dt {
+    color: var(--text_muted);
+    font-size: 0.85rem;
+}
+
+.cita-detalles dd {
+    margin: 0.25rem 0 0;
+    color: var(--primary_color);
+    font-weight: 700;
+}
+
+.estado-cita {
+    display: inline-flex;
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
+    background: #e7f4f2;
+    color: var(--btn_main);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.estado-cita--pendiente {
+    background: #fff4d6;
+    color: #805b00;
+}
+
+.estado-cita--cancelada {
+    background: #fee8e7;
+    color: #a3322b;
+}
+
+@media (max-width: 700px) {
+    .consulta-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 520px) {
+    .pagina-consultar-cita {
+        width: min(100% - 1.25rem, 1000px);
+        padding: 2rem 0;
+    }
+
+    .cita-detalles {
+        grid-template-columns: 1fr;
+    }
+}

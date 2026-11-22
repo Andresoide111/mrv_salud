@@ -1,0 +1,156 @@
+:root {
+    --primary_color: #17313B;
+    --btn_main: #0F7772;
+    --btn_principal: #168C86;
+    --bg_color: #F4F5F0;
+    --surface_color: #ffffff;
+    --text_color: #0f172a;
+    --text_muted: #63767C;
+    --color_claro: #e2e8f0;
+    --shadow_sm: 0 1px 3px rgba(62, 45, 45, 0.1);
+    --shadow_md: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --radius: 8px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg_color);
+    color: var(--text_color);
+    font-family: "Segoe UI", system-ui, sans-serif;
+    line-height: 1.5;
+}
+
+.pagina-especialistas {
+    width: min(1180px, calc(100% - 2rem));
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+.encabezado-pagina {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.encabezado-pagina h1 {
+    margin: 0 0 0.5rem;
+    color: var(--primary_color);
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.encabezado-pagina p {
+    margin: 0;
+    color: var(--text_muted);
+}
+
+.especialistas-filtros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.especialistas-filtros input,
+.especialistas-filtros select {
+    min-width: min(100%, 220px);
+    min-height: 44px;
+    padding: 0.6rem 0.9rem;
+    border: 1px solid #cbd5d8;
+    border-radius: 6px;
+    background: var(--surface_color);
+    color: var(--text_color);
+    font: inherit;
+}
+
+.especialistas-filtros input:focus,
+.especialistas-filtros select:focus {
+    outline: 3px solid rgba(22, 140, 134, 0.2);
+    border-color: var(--btn_principal);
+}
+
+.especialistas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+
+.especialista-card {
+    overflow: hidden;
+    border: 1px solid var(--color_claro);
+    border-radius: var(--radius);
+    background: var(--surface_color);
+    box-shadow: var(--shadow_sm);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.especialista-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow_md);
+}
+
+.especialista-foto {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    background: #e7efec;
+}
+
+.especialista-info {
+    padding: 1.25rem;
+}
+
+.especialista-info h2 {
+    margin: 0 0 0.25rem;
+    color: var(--primary_color);
+    font-size: 1.15rem;
+}
+
+.especialista-info p {
+    margin: 0.35rem 0;
+    color: var(--text_muted);
+}
+
+.especialista-especialidad {
+    color: var(--btn_main) !important;
+    font-weight: 700;
+}
+
+.boton {
+    display: inline-flex;
+    min-height: 42px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.75rem;
+    padding: 0.55rem 1rem;
+    border-radius: 6px;
+    background: var(--btn_principal);
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.boton:hover {
+    background: var(--btn_main);
+}
+
+@media (max-width: 900px) {
+    .especialistas-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .pagina-especialistas {
+        width: min(100% - 1.25rem, 1180px);
+        padding: 2rem 0;
+    }
+
+    .especialistas-grid {
+        grid-template-columns: 1fr;
+    }
+}

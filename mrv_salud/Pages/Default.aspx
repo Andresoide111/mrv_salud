@@ -40,9 +40,9 @@
         </div>
 
         <div class="banner-box imagen-derecha">
-            <img src="<%= ResolveUrl("~/Images/banner-principal.jpg") %>" />  <!-- foto de medico agregar -->
+            <img src="<%= ResolveUrl("~/Images/banner-principal.jpg") %>" alt="Banner Principal" />  <!--banner principal -->
             <div class="floating-card">
-                <img src="assets/img/punto.svg" alt="Citas" class="icono">
+                <img src="<%= ResolveUrl("~/Images/punto.svg") %>" alt="icono" /> 
                 <div>
                     <strong>Citas disponibles hoy</strong>
                     <span>Consulta los horarios médicos</span>
@@ -51,10 +51,10 @@
         </div>
     </section>
 
-    <!-- Accesos Rápidos (Tarjetas Blancas) -->
+    <!-- tarjetas blancas -->
     <section class="accesos-rapidos">
-        <a href="pages/agendar_cita.html" class="card-acceso">
-            <div class="card-icon">           </div>
+        <a href="pages/agendar_cita.html" class="card-acceso"><!--revisar esta ruta -->
+            <div class="card-icon"><img src="<%= ResolveUrl("~/Images/calendario_verde.svg") %>" alt="icono_calendario" /></div>
             <div>
                 <h4>Reserva en línea</h4>
                 <p>Elige médico, fecha y hora</p>
@@ -63,7 +63,7 @@
         </a>
 
         <a href="pages/consultar-cita.html" class="card-acceso">
-            <div class="card-icon"><img src="assets/img/lupa.svg" alt="Lupa"></div>
+            <div class="card-icon"><img src="<%= ResolveUrl("~/Images/lupa.svg") %>" alt="icono_lupa" /> </div>
             <div>
                 <h4>Consulta tu cita</h4>
                 <p>Ver el estado de tu reserva</p>
@@ -71,8 +71,8 @@
             <span class="flecha-card">&rarr;</span>
         </a>
 
-        <a href="pages/contacto.html" class="card-acceso">
-            <div class="card-icon"><img src="assets/img/ubicacion.svg" alt="Ubicación"></div>
+        <a href="pages/contacto.html" class="card-acceso"><!--revisar esta ruta -->
+            <div class="card-icon"><img src="<%= ResolveUrl("~/Images/ubicacion.svg") %>" alt="icono" /> </div>
             <div>
                 <h4>Visítanos</h4>
                 <p>Encuentra nuestra sede</p>
@@ -91,28 +91,28 @@
 
         <div class="grid-especialidades">
             <div class="card-especialidad">
-                <div class="icono-esp"><img src="assets/img/cardiologia.svg" alt="Cardiología"></div>
+                <div class="icono-esp"><img src="<%= ResolveUrl("~/Images/cardiologia.svg") %>" alt="Cardiología" /></div>
                 <h3>Cardiología</h3>
                 <p>Prevención, diagnóstico y tratamiento integral de enfermedades cardiovasculares.</p>
                 <a href="pages/especialidades.html" class="enlace-card">Ver especialidad &rarr;</a>
             </div>
 
             <div class="card-especialidad">
-                <div class="icono-esp"><img src="assets/img/pediatria.svg" alt="Pediatría"></div>
+                <div class="icono-esp"><img src="<%= ResolveUrl("~/Images/pediatria.svg") %>" alt="Pediatría" /></div>
                 <h3>Pediatría</h3>
                 <p>Atención médica y especializada para acompañar el sano crecimiento.</p>
                 <a href="pages/especialidades.html" class="enlace-card">Ver especialidad &rarr;</a>
             </div>
 
             <div class="card-especialidad">
-                <div class="icono-esp"><img src="assets/img/neurologia.svg" alt="Neurología"></div>
+                <div class="icono-esp"><img src="<%= ResolveUrl("~/Images/neurologia.svg") %>" alt="Neurología" /></div>
                 <h3>Neurología</h3>
                 <p>Estudio y tratamiento de las lesiones del sistema nervioso central y periférico.</p>
                 <a href="pages/especialidades.html" class="enlace-card">Ver especialidad &rarr;</a>
             </div>
 
             <div class="card-especialidad">
-                <div class="icono-esp"><img src="<%= ResolveUrl("~/Images/cardiologia.svg") %>" /></div>
+                <div class="icono-esp"><img src="<%= ResolveUrl("~/Images/ortopedia.svg") %>" alt="Ortopedia"/></div>
                 <h3>Ortopedia</h3>
                 <p>Prevención de las lesiones del aparato locomotor y tratamiento musculoesquelético.</p>
                 <a href="pages/especialidades.html" class="enlace-card">Ver especialidad &rarr;</a>

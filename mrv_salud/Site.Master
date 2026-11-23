@@ -56,8 +56,8 @@
                  <span>Agendar una cita</span>
              </a>
 
-             <a class="btn-login" href="login.html">
-                 <img src="<%= ResolveUrl("~/Images/usuario.svg") %>" alt="Icono usuario" class="icono-login">
+             <a class="btn-login" href="<%= ResolveUrl("~/Pages/Login.aspx") %>">
+                 <img src="../assets/img/usuario.svg" alt="Icono usuario" class="icono-login">
                  <span>Inicia sesión</span>
              </a>
 

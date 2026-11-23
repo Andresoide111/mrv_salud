@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1600" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A3D62" />
+      <stop offset="50%" stop-color="#0E6BA8" />
+      <stop offset="100%" stop-color="#00A896" />
+    </linearGradient>
+
+    
+    <linearGradient id="wave-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.02" />
+    </linearGradient>
+
+    
+    <linearGradient id="pulse-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#48CAE4" stop-opacity="0" />
+      <stop offset="50%" stop-color="#90E0EF" stop-opacity="1" />
+      <stop offset="100%" stop-color="#48CAE4" stop-opacity="0" />
+    </linearGradient>
+
+    
+    <pattern id="medical-grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.06" />
+    </pattern>
+  </defs>
+
+  
+  <rect width="900" height="1600" fill="url(#bg-grad)" />
+  
+  
+  <rect width="900" height="1600" fill="url(#medical-grid)" />
+
+  
+  <path d="M0,350 C300,250 600,450 900,300 L900,0 L0,0 Z" fill="url(#wave-grad)" />
+  <path d="M0,1250 C250,1150 650,1350 900,1200 L900,1600 L0,1600 Z" fill="url(#wave-grad)" />
+
+  
+  <circle cx="750" cy="250" r="220" fill="#FFFFFF" fill-opacity="0.04" />
+  <circle cx="150" cy="1350" r="280" fill="#00F5D4" fill-opacity="0.05" />
+
+  
+  <g fill="#FFFFFF" fill-opacity="0.12">
+    <path d="M180,220 h20 v-20 h15 v20 h20 v15 h-20 v20 h-15 v-20 h-20 z" />
+    <path d="M720,620 h14 v-14 h10 v14 h14 v10 h-14 v14 h-10 v-14 h-14 z" />
+    <path d="M220,1080 h16 v-16 h12 v16 h16 v12 h-16 v16 h-12 v-16 h-16 z" />
+    <path d="M680,1380 h20 v-20 h15 v20 h20 v15 h-20 v20 h-15 v-20 h-20 z" />
+  </g>
+
+  
+  <g transform="translate(450, 720)">
+    
+    <circle cx="0" cy="0" r="190" fill="#FFFFFF" fill-opacity="0.05" stroke="#90E0EF" stroke-width="1.5" stroke-opacity="0.3" stroke-dasharray="10 10" />
+    <circle cx="0" cy="0" r="145" fill="#FFFFFF" fill-opacity="0.08" />
+    
+    
+    <rect x="-22" y="-75" width="44" height="150" rx="12" fill="#FFFFFF" />
+    <rect x="-75" y="-22" width="150" height="44" rx="12" fill="#FFFFFF" />
+    
+    
+    <circle cx="0" cy="0" r="14" fill="#00A896" />
+  </g>
+
+  
+  <path d="M 0,980 L 280,980 L 310,940 L 340,1030 L 380,870 L 420,1080 L 455,920 L 485,980 L 900,980" fill="none" stroke="url(#pulse-grad)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+
+  
+  <g stroke="#90E0EF" stroke-width="2" stroke-opacity="0.25" fill="#90E0EF" fill-opacity="0.6">
+    <line x1="150" y1="450" x2="320" y2="520" />
+    <line x1="320" y1="520" x2="260" y2="650" />
+    <circle cx="150" cy="450" r="5" />
+    <circle cx="320" cy="520" r="7" />
+    <circle cx="260" cy="650" r="4" />
+
+    <line x1="750" y1="1080" x2="600" y2="1150" />
+    <line x1="600" y1="1150" x2="680" y2="1260" />
+    <circle cx="750" cy="1080" r="5" />
+    <circle cx="600" cy="1150" r="7" />
+    <circle cx="680" cy="1260" r="4" />
+  </g>
+</svg>

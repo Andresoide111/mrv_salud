@@ -130,8 +130,7 @@
             <span class="tag-light">TU SALUD NO PUEDE ESPERAR</span>
             <h2>Una atención más simple, cercana y oportuna.</h2>
         </div>
-        <div>
-            <a class="btn-white" href="pages/agendar_cita.html">Solicitar cita ahora &rarr;</a>
+        <div><a  class="btn-white" href="<%= ResolveUrl("~/Pages/AgendarCita.aspx") %>">Solicitar cita ahora &rarr;</a>
         </div>
     </section>
 </main>

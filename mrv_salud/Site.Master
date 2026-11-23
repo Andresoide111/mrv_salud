@@ -36,11 +36,7 @@
      <!-- Encabezado principal -->
      <div class="encabezado">
          <!-- Logo -->
-         <a href="../index.html" class="logo-centromedico">
-             <img src="../assets/img/logo-centromedico.svg"
-                  alt="Logo Centro Médico MRV Salud"
-                  class="logo-hospital"
-                  height="50">
+         <a href="../index.html" class="logo-centromedico"><img  src="<%= ResolveUrl("~/Images/logo-centromedico.svg") %>"alt="Logo Centro Médico MRV Salud" class="logo-hospital" height="50"/>
          </a>
 
          <!-- Menú de navegación -->
@@ -55,7 +51,8 @@
          <!-- Acciones del usuario -->
          <div class="acciones-usuario">
              <a class="btn-agendar" href="<%= ResolveUrl("~/Pages/AgendarCita.aspx") %>">
-                 <img src="../assets/img/calendario.svg" alt="Icono calendario" class="icono-btn">
+              
+                 <img src="<%= ResolveUrl("~/Images/calendario.svg") %>" alt="Icono calendario" class="icono-btn">
                  <span>Agendar una cita</span>
              </a>
 
@@ -78,6 +75,8 @@
             <asp:ContentPlaceHolder ID="contenido_principal" runat="server">
             </asp:ContentPlaceHolder>
         </div>
+
+
     </form>
 </body>
 </html>

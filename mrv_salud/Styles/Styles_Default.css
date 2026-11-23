@@ -169,6 +169,7 @@ main {
     }
 
 /* ---------------------- ACCESOS RÁPIDOS ---------------------- */
+
 .accesos-rapidos {
     display: grid;
     /* Se adapta automáticamente de 3 columnas a 2 y luego a 1 */

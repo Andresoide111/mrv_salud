@@ -18,7 +18,7 @@
             <p>Un equipo médico de excelencia, tecnología moderna y la calidez que tu familia merece. Tu bienestar comienza aquí.</p>
             
             <div class="banner-botones">
-                <a class="btn-agendar" href="pages/agendar_cita.html">Agendar una cita <img src="<%= ResolveUrl("~/Images/telefono.svg") %>" /></a>
+                <a class="btn-agendar" href="pages/agendar_cita.html">Agendar una cita <img src="<%= ResolveUrl("~/Images/telefono.svg") %>" />
                 <a class="enlace-secundario" href="pages/especialidades.html">Conoce a nuestros médicos</a>
             </div>
 
@@ -40,7 +40,7 @@
         </div>
 
         <div class="banner-box imagen-derecha">
-            <img src="<%= ResolveUrl("~/Images/telefono.svg") %>" />  <!-- foto de medico agregar -->
+            <img src="<%= ResolveUrl("~/Images/banner-principal.jpg") %>" />  <!-- foto de medico agregar -->
             <div class="floating-card">
                 <img src="assets/img/punto.svg" alt="Citas" class="icono">
                 <div>
@@ -54,7 +54,7 @@
     <!-- Accesos Rápidos (Tarjetas Blancas) -->
     <section class="accesos-rapidos">
         <a href="pages/agendar_cita.html" class="card-acceso">
-            <div class="card-icon"><img src="assets/img/calendario_verde.svg" height="24" width="24" alt="Calendario"></div>
+            <div class="card-icon">           </div>
             <div>
                 <h4>Reserva en línea</h4>
                 <p>Elige médico, fecha y hora</p>
@@ -112,7 +112,7 @@
             </div>
 
             <div class="card-especialidad">
-                <div class="icono-esp"><img src="assets/img/ortopedia.svg" alt="Ortopedia"></div>
+                <div class="icono-esp"><img src="<%= ResolveUrl("~/Images/cardiologia.svg") %>" /></div>
                 <h3>Ortopedia</h3>
                 <p>Prevención de las lesiones del aparato locomotor y tratamiento musculoesquelético.</p>
                 <a href="pages/especialidades.html" class="enlace-card">Ver especialidad &rarr;</a>

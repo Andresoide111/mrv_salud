@@ -1,2 +1,26 @@
 ﻿body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg_color);
+    color: var(--text_color);
+    line-height: 1.5;
+    overflow-x: hidden; /* Evita scroll horizontal accidental */
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --primary_color: #17313B; /* Texto Principal / Oscuro */
+    --btn_main: #0F7772; /* Botones hover */
+    --btn_principal: #168C86; /* Botón principal */
+    --bg_color: #F4F5F0; /* Fondo Principal */
+    --surface_color: #ffffff; /* Tarjetas / Formularios */
+    --text_color: #0f172a; /* Texto Principal */
+    --text_muted: #63767C; /* Texto Secundario */
+    --color_claro: #e2e8f0; /* Bordes */
+
+    --shadow_sm: 0 1px 3px rgba(62, 45, 45, 0.1);
+    --shadow_md: 0 4px 6px -1px rgba(0,0,0,0.1);
+    --radius: 8px; /* Bordes redondeados estándar */
 }

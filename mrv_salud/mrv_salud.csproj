@@ -75,6 +75,7 @@
     <Content Include="Pages\Especialistas.aspx" />
     <Content Include="Pages\Servicios.aspx" />
     <Content Include="Styles\Styles.css" />
+    <Content Include="Styles\Styles_Default.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -130,6 +131,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>

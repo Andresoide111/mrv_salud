@@ -3,16 +3,79 @@
 <!DOCTYPE html>
 
 <html>
-<head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
+  <head runat="server"><!-- ENCABEZADO -->
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><!-- ENCABEZADO -->
+      <title>Portal Web | Sistema de Citas | MRV Salud</title>
+      <asp:ContentPlaceHolder ID="head" runat="server"><!-- ENCABEZADO -->
+      </asp:ContentPlaceHolder><!-- ENCABEZADO -->
+       <link href="<%= ResolveUrl("~/Styles/Styles.css") %>" rel="stylesheet" />
+
 </head>
+
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server"><!-- Aquí irá el panel de anuncios -->
+         <header class="site_header">
+
+     <!-- Panel de información -->
+     <div class="panel_anuncio">
+         <div class="panel_anuncio">
+             <a href="contacto.html">
+                 <img src="<%= ResolveUrl("~/Images/telefono.svg") %>" /><!-- Panel de información -->
+                 <span>Emergencias: <strong>+504 2234-5555</strong></span>
+             </a>
+             <span class="separador">|</span>
+             <a href="#">
+                 <img src="<%= ResolveUrl("~/Images/horario.svg") %>" />
+                 <span>Atención: Lun–Sáb, 7:00 a.m. – 7:00 p.m.</span>
+             </a>
+         </div>
+     </div>
+
+     <!-- Encabezado principal -->
+     <div class="encabezado">
+         <!-- Logo -->
+         <a href="../index.html" class="logo-centromedico">
+             <img src="../assets/img/logo-centromedico.svg"
+                  alt="Logo Centro Médico MRV Salud"
+                  class="logo-hospital"
+                  height="50">
+         </a>
+
+         <!-- Menú de navegación -->
+         <nav class="nav-principal" id="navPrincipal">
+             <a href="<%= ResolveUrl("~/Pages/Default.aspx") %>">Inicio</a>
+             <a href="<%= ResolveUrl("~/Pages/Especialidades.aspx") %>">Especialidades</a>
+             <a href="<%= ResolveUrl("~/Pages/Especialistas.aspx") %>">Especialistas</a>
+             <a href="<%= ResolveUrl("~/Pages/ConsultarCita.aspx") %>">Consultar cita</a>
+             <a href="<%= ResolveUrl("~/Pages/Contacto.aspx") %>">Contacto</a>
+         </nav>
+
+         <!-- Acciones del usuario -->
+         <div class="acciones-usuario">
+             <a class="btn-agendar" href="<%= ResolveUrl("~/Pages/AgendarCita.aspx") %>">
+                 <img src="../assets/img/calendario.svg" alt="Icono calendario" class="icono-btn">
+                 <span>Agendar una cita</span>
+             </a>
+
+             <a class="btn-login" href="login.html">
+                 <img src="../assets/img/usuario.svg" alt="Icono usuario" class="icono-login">
+                 <span>Inicia sesión</span>
+             </a>
+
+             <button type="button" class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+                 <span></span>
+                 <span></span>
+                 <span></span>
+             </button>
+         </div>
+     </div>
+ </header>
+
+
         <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            <asp:ContentPlaceHolder ID="contenido_principal" runat="server">
             </asp:ContentPlaceHolder>
         </div>
     </form>

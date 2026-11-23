@@ -1,149 +1,138 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="mrv_salud.Pages.Default" %>
+﻿<%@ Page Title="Inicio" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="mrv_salud.Pages.Default" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+ <!-- aqui va el enlace al css -->
+    <link href="<%= ResolveUrl("~/Styles/Styles_Default.css") %>" rel="stylesheet" />
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-</asp:Content>
-<!DOCTYPE html>
-<html lang="es">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MRV SALUD | Inicio</title>
-    <link rel="stylesheet" href="css/styles_index.css">
-</head>
-
-<body>
+<asp:Content ID="Content2" ContentPlaceHolderID="contenido_principal" runat="server">
+     <!-- aqui va el contenido que solo usa esta pagina -->
     <main>
-        <!-- Banner Principal -->
-        <section class="bannerprincipal">
-            <div class="banner-box">
-                <span class="tag">CUIDAMOS LO QUE MÁS IMPORTA</span>
-                <h1>
-                    Medicina humana.<br>
-                    <span class="text-green">Atención extraordinaria.</span>
-                </h1>
-                <p>Un equipo médico de excelencia, tecnología moderna y la calidez que tu familia merece. Tu bienestar comienza aquí.</p>
-                
-                <div class="banner-botones">
-                    <a class="btn-agendar" href="pages/agendar_cita.html">Agendar una cita <img src="assets/img/flecha.svg" alt="Flecha" class="icono-flecha"></a>
-                    <a class="enlace-secundario" href="pages/especialidades.html">Conoce a nuestros médicos</a>
-                </div>
-
-                <!-- Estadísticas -->
-                <div class="estadisticas">
-                    <div class="stat-item">
-                        <h3>25+</h3>
-                        <p>Años de experiencia</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>40</h3>
-                        <p>Especialistas certificados</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>98%</h3>
-                        <p>Pacientes satisfechos</p>
-                    </div>
-                </div>
+    <!-- Banner Principal -->
+    <section class="bannerprincipal">
+        <div class="banner-box">
+            <span class="tag">CUIDAMOS LO QUE MÁS IMPORTA</span>
+            <h1>
+                Medicina humana.<br>
+                <span class="text-green">Atención extraordinaria.</span>
+            </h1>
+            <p>Un equipo médico de excelencia, tecnología moderna y la calidez que tu familia merece. Tu bienestar comienza aquí.</p>
+            
+            <div class="banner-botones">
+                <a class="btn-agendar" href="pages/agendar_cita.html">Agendar una cita <img src="assets/img/flecha.svg" alt="Flecha" class="icono-flecha"></a>
+                <a class="enlace-secundario" href="pages/especialidades.html">Conoce a nuestros médicos</a>
             </div>
 
-            <div class="banner-box imagen-derecha">
-                <img src="assets/img/banner-principal.jpg" alt="Doctor atendiendo a paciente" class="banner-image">
-                <div class="floating-card">
-                    <img src="assets/img/punto.svg" alt="Citas" class="icono">
-                    <div>
-                        <strong>Citas disponibles hoy</strong>
-                        <span>Consulta los horarios médicos</span>
-                    </div>
+            <!-- Estadísticas -->
+            <div class="estadisticas">
+                <div class="stat-item">
+                    <h3>25+</h3>
+                    <p>Años de experiencia</p>
+                </div>
+                <div class="stat-item">
+                    <h3>40</h3>
+                    <p>Especialistas certificados</p>
+                </div>
+                <div class="stat-item">
+                    <h3>98%</h3>
+                    <p>Pacientes satisfechos</p>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <!-- Accesos Rápidos (Tarjetas Blancas) -->
-        <section class="accesos-rapidos">
-            <a href="pages/agendar_cita.html" class="card-acceso">
-                <div class="card-icon"><img src="assets/img/calendario_verde.svg" height="24" width="24" alt="Calendario"></div>
+        <div class="banner-box imagen-derecha">
+            <img src="assets/img/banner-principal.jpg" alt="Doctor atendiendo a paciente" class="banner-image">
+            <div class="floating-card">
+                <img src="assets/img/punto.svg" alt="Citas" class="icono">
                 <div>
-                    <h4>Reserva en línea</h4>
-                    <p>Elige médico, fecha y hora</p>
-                </div>
-                <span class="flecha-card">&rarr;</span>
-            </a>
-
-            <a href="pages/consultar-cita.html" class="card-acceso">
-                <div class="card-icon"><img src="assets/img/lupa.svg" alt="Lupa"></div>
-                <div>
-                    <h4>Consulta tu cita</h4>
-                    <p>Ver el estado de tu reserva</p>
-                </div>
-                <span class="flecha-card">&rarr;</span>
-            </a>
-
-            <a href="pages/contacto.html" class="card-acceso">
-                <div class="card-icon"><img src="assets/img/ubicacion.svg" alt="Ubicación"></div>
-                <div>
-                    <h4>Visítanos</h4>
-                    <p>Encuentra nuestra sede</p>
-                </div>
-                <span class="flecha-card">&rarr;</span>
-            </a>
-        </section>
-
-        <!-- Sección de Especialidades -->
-        <section class="seccion-especialidades">
-            <div class="seccion-header">
-                <span class="tag">ATENCIÓN INTEGRAL</span>
-                <h2>Especialidades para cada etapa de tu vida</h2>
-                <p>Reunimos experiencia, tecnología y un enfoque humano para brindarte diagnósticos precisos y tratamientos personalizados.</p>
-            </div>
-
-            <div class="grid-especialidades">
-                <div class="card-especialidad">
-                    <div class="icono-esp"><img src="assets/img/cardiologia.svg" alt="Cardiología"></div>
-                    <h3>Cardiología</h3>
-                    <p>Prevención, diagnóstico y tratamiento integral de enfermedades cardiovasculares.</p>
-                    <a href="pages/especialidades.html" class="enlace-card">Ver especialidad &rarr;</a>
-                </div>
-
-                <div class="card-especialidad">
-                    <div class="icono-esp"><img src="assets/img/pediatria.svg" alt="Pediatría"></div>
-                    <h3>Pediatría</h3>
-                    <p>Atención médica y especializada para acompañar el sano crecimiento.</p>
-                    <a href="pages/especialidades.html" class="enlace-card">Ver especialidad &rarr;</a>
-                </div>
-
-                <div class="card-especialidad">
-                    <div class="icono-esp"><img src="assets/img/neurologia.svg" alt="Neurología"></div>
-                    <h3>Neurología</h3>
-                    <p>Estudio y tratamiento de las lesiones del sistema nervioso central y periférico.</p>
-                    <a href="pages/especialidades.html" class="enlace-card">Ver especialidad &rarr;</a>
-                </div>
-
-                <div class="card-especialidad">
-                    <div class="icono-esp"><img src="assets/img/ortopedia.svg" alt="Ortopedia"></div>
-                    <h3>Ortopedia</h3>
-                    <p>Prevención de las lesiones del aparato locomotor y tratamiento musculoesquelético.</p>
-                    <a href="pages/especialidades.html" class="enlace-card">Ver especialidad &rarr;</a>
+                    <strong>Citas disponibles hoy</strong>
+                    <span>Consulta los horarios médicos</span>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="contenedor-boton-centro">
-                <a class="btn-outline" href="pages/especialidades.html">Ver todas las especialidades</a>
-            </div>
-        </section>
-
-        <!-- Banner Oscuro Inferior -->
-        <section class="banner-dark-cta">
-            <div class="cta-contenido">
-                <span class="tag-light">TU SALUD NO PUEDE ESPERAR</span>
-                <h2>Una atención más simple, cercana y oportuna.</h2>
-            </div>
+    <!-- Accesos Rápidos (Tarjetas Blancas) -->
+    <section class="accesos-rapidos">
+        <a href="pages/agendar_cita.html" class="card-acceso">
+            <div class="card-icon"><img src="assets/img/calendario_verde.svg" height="24" width="24" alt="Calendario"></div>
             <div>
-                <a class="btn-white" href="pages/agendar_cita.html">Solicitar cita ahora &rarr;</a>
+                <h4>Reserva en línea</h4>
+                <p>Elige médico, fecha y hora</p>
             </div>
-        </section>
-    </main>
+            <span class="flecha-card">&rarr;</span>
+        </a>
 
-</body>
+        <a href="pages/consultar-cita.html" class="card-acceso">
+            <div class="card-icon"><img src="assets/img/lupa.svg" alt="Lupa"></div>
+            <div>
+                <h4>Consulta tu cita</h4>
+                <p>Ver el estado de tu reserva</p>
+            </div>
+            <span class="flecha-card">&rarr;</span>
+        </a>
 
-</html>
+        <a href="pages/contacto.html" class="card-acceso">
+            <div class="card-icon"><img src="assets/img/ubicacion.svg" alt="Ubicación"></div>
+            <div>
+                <h4>Visítanos</h4>
+                <p>Encuentra nuestra sede</p>
+            </div>
+            <span class="flecha-card">&rarr;</span>
+        </a>
+    </section>
+
+    <!-- Sección de Especialidades -->
+    <section class="seccion-especialidades">
+        <div class="seccion-header">
+            <span class="tag">ATENCIÓN INTEGRAL</span>
+            <h2>Especialidades para cada etapa de tu vida</h2>
+            <p>Reunimos experiencia, tecnología y un enfoque humano para brindarte diagnósticos precisos y tratamientos personalizados.</p>
+        </div>
+
+        <div class="grid-especialidades">
+            <div class="card-especialidad">
+                <div class="icono-esp"><img src="assets/img/cardiologia.svg" alt="Cardiología"></div>
+                <h3>Cardiología</h3>
+                <p>Prevención, diagnóstico y tratamiento integral de enfermedades cardiovasculares.</p>
+                <a href="pages/especialidades.html" class="enlace-card">Ver especialidad &rarr;</a>
+            </div>
+
+            <div class="card-especialidad">
+                <div class="icono-esp"><img src="assets/img/pediatria.svg" alt="Pediatría"></div>
+                <h3>Pediatría</h3>
+                <p>Atención médica y especializada para acompañar el sano crecimiento.</p>
+                <a href="pages/especialidades.html" class="enlace-card">Ver especialidad &rarr;</a>
+            </div>
+
+            <div class="card-especialidad">
+                <div class="icono-esp"><img src="assets/img/neurologia.svg" alt="Neurología"></div>
+                <h3>Neurología</h3>
+                <p>Estudio y tratamiento de las lesiones del sistema nervioso central y periférico.</p>
+                <a href="pages/especialidades.html" class="enlace-card">Ver especialidad &rarr;</a>
+            </div>
+
+            <div class="card-especialidad">
+                <div class="icono-esp"><img src="assets/img/ortopedia.svg" alt="Ortopedia"></div>
+                <h3>Ortopedia</h3>
+                <p>Prevención de las lesiones del aparato locomotor y tratamiento musculoesquelético.</p>
+                <a href="pages/especialidades.html" class="enlace-card">Ver especialidad &rarr;</a>
+            </div>
+        </div>
+
+        <div class="contenedor-boton-centro">
+            <a class="btn-outline" href="pages/especialidades.html">Ver todas las especialidades</a>
+        </div>
+    </section>
+
+    <!-- Banner Oscuro Inferior -->
+    <section class="banner-dark-cta">
+        <div class="cta-contenido">
+            <span class="tag-light">TU SALUD NO PUEDE ESPERAR</span>
+            <h2>Una atención más simple, cercana y oportuna.</h2>
+        </div>
+        <div>
+            <a class="btn-white" href="pages/agendar_cita.html">Solicitar cita ahora &rarr;</a>
+        </div>
+    </section>
+</main>
+</asp:Content>

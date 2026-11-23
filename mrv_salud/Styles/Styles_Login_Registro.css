@@ -391,3 +391,44 @@ body {
         padding: 1.75rem 1rem;
     }
 }
+.recuperar-container {
+    max-width: 460px;
+    width: 100%;
+}
+
+.mensaje-estado {
+    padding: 0.85rem 1rem;
+    border-radius: 6px;
+    font-size: 0.88rem;
+    margin-bottom: 1.15rem;
+    line-height: 1.45;
+}
+
+.mensaje-exito {
+    background-color: rgba(22, 140, 134, 0.12);
+    border: 1px solid rgba(22, 140, 134, 0.35);
+    color: var(--primary-color);
+}
+
+.mensaje-error {
+    background-color: rgba(185, 28, 28, 0.08);
+    border: 1px solid rgba(185, 28, 28, 0.3);
+    color: #991b1b;
+}
+
+.volver-login-box {
+    margin-top: 1.35rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+    .volver-login-box a {
+        color: var(--btn-principal);
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+        .volver-login-box a:hover {
+            text-decoration: underline;
+        }

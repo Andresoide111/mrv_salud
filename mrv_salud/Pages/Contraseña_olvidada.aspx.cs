@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace mrv_salud.Pages
 {
-    public partial class contraseña_olvidada : System.Web.UI.Page
+    public partial class Contraseña_olvidada : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

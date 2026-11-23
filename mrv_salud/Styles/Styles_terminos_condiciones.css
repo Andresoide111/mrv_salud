@@ -1,0 +1,291 @@
+﻿:root {
+    --primary-color: #17313B;
+    --btn-main: #0F7772;
+    --btn-principal: #168C86;
+    --bg-color: #F4F5F0;
+    --surface-color: #ffffff;
+    --text-color: #0f172a;
+    --text-muted: #63767C;
+    --color-claro: #e2e8f0;
+    --shadow-sm: 0 1px 3px rgba(62, 45, 45, 0.1);
+    --radius: 8px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+.terminos-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem 3rem;
+}
+
+/* Banner superior del documento */
+.terminos-hero {
+    background-color: var(--surface-color);
+    border-radius: var(--radius);
+    padding: 2.5rem 2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-claro);
+}
+
+    .terminos-hero .tag {
+        display: inline-block;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: var(--btn-principal);
+        background-color: rgba(22, 140, 134, 0.1);
+        padding: 4px 10px;
+        border-radius: 4px;
+        text-transform: uppercase;
+    }
+
+    .terminos-hero h1 {
+        font-size: clamp(1.75rem, 3.2vw, 2.4rem);
+        color: var(--primary-color);
+        margin: 0.75rem 0 0.65rem;
+        line-height: 1.2;
+    }
+
+    .terminos-hero p {
+        color: var(--text-muted);
+        font-size: 0.98rem;
+        max-width: 720px;
+        margin-bottom: 1rem;
+    }
+
+.fecha-actualizacion {
+    display: inline-block;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    background-color: var(--bg-color);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+}
+
+/* Disposición en 2 columnas: Índice + Contenido */
+.terminos-layout {
+    display: grid;
+    grid-template-columns: 270px 1fr;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+/* Índice lateral fijo al hacer scroll */
+.terminos-indice {
+    background-color: var(--surface-color);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-claro);
+    position: sticky;
+    top: 1.5rem;
+}
+
+    .terminos-indice h3 {
+        font-size: 0.82rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+        padding-bottom: 0.6rem;
+        border-bottom: 1px solid var(--color-claro);
+    }
+
+    .terminos-indice ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+    }
+
+    .terminos-indice a {
+        display: block;
+        font-size: 0.86rem;
+        color: var(--text-muted);
+        text-decoration: none;
+        padding: 0.25rem 0;
+        transition: color 0.2s ease, transform 0.2s ease;
+    }
+
+        .terminos-indice a:hover {
+            color: var(--btn-principal);
+            transform: translateX(3px);
+        }
+
+/* Contenedor principal de cláusulas */
+.terminos-contenido {
+    background-color: var(--surface-color);
+    border-radius: var(--radius);
+    padding: 2.25rem 2.5rem;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-claro);
+}
+
+.clausula {
+    padding-bottom: 1.75rem;
+    margin-bottom: 1.75rem;
+    border-bottom: 1px solid var(--color-claro);
+    scroll-margin-top: 1.5rem;
+}
+
+    .clausula:last-of-type {
+        border-bottom: none;
+        margin-bottom: 1rem;
+    }
+
+    .clausula h2 {
+        font-size: 1.2rem;
+        color: var(--primary-color);
+        margin-bottom: 0.75rem;
+    }
+
+    .clausula p {
+        color: var(--text-color);
+        font-size: 0.94rem;
+        line-height: 1.7;
+        margin-bottom: 0.75rem;
+    }
+
+        .clausula p:last-child {
+            margin-bottom: 0;
+        }
+
+    .clausula ul {
+        padding-left: 1.35rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.55rem;
+        color: var(--text-color);
+        font-size: 0.94rem;
+        line-height: 1.65;
+    }
+
+    .clausula a {
+        color: var(--btn-principal);
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+        .clausula a:hover {
+            text-decoration: underline;
+        }
+
+/* Caja de aviso para emergencias */
+.aviso-emergencia {
+    background-color: rgba(22, 140, 134, 0.08);
+    border-left: 4px solid var(--btn-principal);
+    padding: 1rem 1.25rem;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.92rem;
+    color: var(--primary-color);
+    line-height: 1.6;
+}
+
+/* Botones inferiores */
+.terminos-acciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--color-claro);
+}
+
+.btn-volver-registro {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 18px;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+    .btn-volver-registro:hover {
+        background-color: var(--primary-color);
+        color: #ffffff;
+    }
+
+.btn-inicio {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--btn-principal);
+    color: #ffffff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+    .btn-inicio:hover {
+        background-color: var(--btn-main);
+    }
+
+/* ====================== RESPONSIVIDAD ====================== */
+@media (max-width: 900px) {
+    .terminos-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .terminos-indice {
+        position: static;
+    }
+
+        .terminos-indice ul {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.5rem 1rem;
+        }
+}
+
+@media (max-width: 600px) {
+    .terminos-main {
+        padding: 1.25rem 0.75rem 2.5rem;
+    }
+
+    .terminos-hero,
+    .terminos-contenido {
+        padding: 1.5rem 1.15rem;
+    }
+
+    .terminos-indice ul {
+        grid-template-columns: 1fr;
+    }
+
+    .terminos-acciones {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .btn-inicio {
+        justify-content: center;
+        width: 100%;
+    }
+}

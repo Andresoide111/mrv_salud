@@ -104,7 +104,7 @@
                 </section>
 
                 <div class="terminos-acciones">
-                    <a href="<%= ResolveUrl("~/Pages/Default.aspx") %>" class="btn-inicio">Ir al inicio</a>
+                    <a href="Default.aspx" class="btn-inicio">Ir al inicio</a>
                 </div>
             </article>
         </div>

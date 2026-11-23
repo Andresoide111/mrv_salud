@@ -18,7 +18,7 @@
             <p>Un equipo médico de excelencia, tecnología moderna y la calidez que tu familia merece. Tu bienestar comienza aquí.</p>
             
             <div class="banner-botones">
-                <a class="btn-agendar" href="pages/agendar_cita.html">Agendar una cita <img src="assets/img/flecha.svg" alt="Flecha" class="icono-flecha"></a>
+                <a class="btn-agendar" href="pages/agendar_cita.html">Agendar una cita <img src="<%= ResolveUrl("~/Images/telefono.svg") %>" /></a>
                 <a class="enlace-secundario" href="pages/especialidades.html">Conoce a nuestros médicos</a>
             </div>
 
@@ -40,7 +40,7 @@
         </div>
 
         <div class="banner-box imagen-derecha">
-            <img src="assets/img/banner-principal.jpg" alt="Doctor atendiendo a paciente" class="banner-image">
+            <img src="<%= ResolveUrl("~/Images/telefono.svg") %>" />  <!-- foto de medico agregar -->
             <div class="floating-card">
                 <img src="assets/img/punto.svg" alt="Citas" class="icono">
                 <div>

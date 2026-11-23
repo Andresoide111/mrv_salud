@@ -67,6 +67,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\banner-principal.jpg" />
+    <Content Include="Images\calendario.svg" />
+    <Content Include="Images\calendario_verde.svg" />
+    <Content Include="Images\cardiologia.svg" />
+    <Content Include="Images\flecha.svg" />
+    <Content Include="Images\horario.svg" />
+    <Content Include="Images\icono_luna.svg" />
+    <Content Include="Images\icono_sol.svg" />
+    <Content Include="Images\logo-centromedico.svg" />
+    <Content Include="Images\lupa.svg" />
+    <Content Include="Images\neurologia.svg" />
+    <Content Include="Images\ortopedia.svg" />
+    <Content Include="Images\pediatria.svg" />
+    <Content Include="Images\punto.svg" />
+    <Content Include="Images\telefono.svg" />
+    <Content Include="Images\ubicacion.svg" />
+    <Content Include="Images\usuario.svg" />
     <Content Include="Pages\AgendarCita.aspx" />
     <Content Include="Pages\ConfirmacionCita.aspx" />
     <Content Include="Pages\ConsultarCita.aspx" />
@@ -147,9 +164,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Images\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

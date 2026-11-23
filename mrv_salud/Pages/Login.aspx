@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="Login" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="mrv_salud.Pages.Login" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
- <!-- aqui va el enlace al css -->
+    <!-- aqui va el enlace al css -->
     <link href="<%= ResolveUrl("~/Styles/Styles_Login_Registro.css") %>" rel="stylesheet" />
 </asp:Content>
 
@@ -40,14 +40,14 @@
                 <div class="login-form-container">
                     <!-- Pestañas superiores -->
                     <div class="auth-tabs" role="tablist">
-                        <a href="login.html" class="tab-item active" role="tab" aria-selected="true">Iniciar sesión</a>
-                        <a href="registrar.html" class="tab-item" role="tab" aria-selected="false">Crear cuenta</a>
+                        <a href="<%= ResolveUrl("~/Pages/Login.aspx") %>" class="tab-item active" role="tab" aria-selected="true">Iniciar sesión</a>
+                        <a href="<%= ResolveUrl("~/Pages/Registrar.aspx") %>" class="tab-item" role="tab" aria-selected="false">Crear cuenta</a>
                     </div>
 
                     <!-- Encabezado del formulario -->
                     <div class="form-header">
                         <div class="login-icon-circle">
-                            <img src="../assets/img/user_lock.svg" alt="Acceso seguro MRV Salud">
+                            <img src="<%= ResolveUrl("~/Images/user_lock.svg") %>" alt="Acceso seguro MRV Salud">
                         </div>
                         <h2>Bienvenido de nuevo</h2>
                         <p>Ingresa a tu espacio personal de salud</p>
@@ -69,7 +69,7 @@
                                 <input type="checkbox" name="remember" id="remember">
                                 <span>Recordarme</span>
                             </label>
-                            <a href="contraseña_olvidada.html" class="forgot-password">¿Olvidaste tu contraseña?</a>
+                            <a href="<%= ResolveUrl("~/Pages/Contraseña_olvidada.aspx") %>" class="forgot-password">¿Olvidaste tu contraseña?</a>
                         </div>
 
                         <button type="submit" class="btn-submit">

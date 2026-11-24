@@ -102,6 +102,7 @@
     <Content Include="Styles\Styles_Default.css" />
     <Content Include="Styles\Styles_Login_Registro.css" />
     <Content Include="Styles\Styles_terminos_condiciones.css" />
+    <Content Include="Styles\Styles_agendar.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

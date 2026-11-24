@@ -27,8 +27,8 @@
         <div class="contenedor_cita">
 
 
-            <!-- FORMULARIO -->
-            <form class="formulario_cita">
+            <!-- FORMULARIO, en asp no se pueden tener formularios anidados-->
+            <div class="formulario_cita">
 
                 <div class="formulario">
 
@@ -208,8 +208,9 @@
                     </div>
 
                 </div>
+                </div>
 
-            </form>
+        
 
 
             <!-- =====================================

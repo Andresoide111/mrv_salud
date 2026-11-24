@@ -99,6 +99,7 @@
     <Content Include="Pages\Registrar.aspx" />
     <Content Include="Pages\Servicios.aspx" />
     <Content Include="Pages\Terminos_y_condiciones.aspx" />
+    <Content Include="Styles\Style_Confirmacion_Cita.css" />
     <Content Include="Styles\Styles.css" />
     <Content Include="Styles\styles_contacto.css" />
     <Content Include="Styles\Styles_Default.css" />

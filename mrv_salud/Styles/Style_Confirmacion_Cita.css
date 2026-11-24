@@ -1,0 +1,97 @@
+﻿body {
+}
+.titulos_pagina {
+    text-align: center;
+    color: var(--texto_principal);
+}
+
+.titulo_pequeño {
+    margin-top: 70px;
+    margin-bottom: 5px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    border-top: 1px solid var(--verde_azulado);
+    padding-top: 8px;
+    display: inline-block;
+}
+
+.subtitulo_pagina {
+    font-size: 55px;
+    font-family: Georgia, serif;
+}
+
+.descripcion_pagina {
+    font-size: 14px;
+    margin-top: 0;
+}
+
+.tabla_confirmacion {
+    width: 85%;
+    max-width: 850px;
+    margin: 35px auto;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    background-color: var(--color_blanco);
+    margin-bottom: 30px;
+}
+
+/* ENCABEZADO */
+.encabezado_tabla {
+    text-align: left;
+    padding: 25px;
+    background-color: var(--color_blanco);
+    color: var(--primary_color);
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-weight: normal;
+    border-bottom: 1px solid var(--color_blanco);
+    text-align: center;
+}
+
+.subtitulo_tabla {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    font-weight: normal;
+}
+
+/* TITULO DE LOS DETALLES */
+.titulo_detalles {
+    text-align: left;
+    padding: 20px 25px;
+    color: var(--primary_color);
+    font-size: 15px;
+    border-bottom: 1px solid var(--color_blanco_perla);
+}
+
+/* CELDAS */
+.tabla_confirmacion tbody th,
+.tabla_confirmacion tbody td {
+    padding: 22px 25px;
+    border-bottom: 1px solid var(--color_blanco_perla);
+    text-align: left;
+    width: 50%;
+}
+
+/* NOMBRES DE LOS CAMPOS */
+.tabla_confirmacion tbody th {
+    color: var(--text_muted);
+    font-size: 15px;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+}
+
+/* INFORMACIÓN DEL PACIENTE */
+.tabla_confirmacion tbody td {
+    color: var( --primary_color);
+    font-size: 14px;
+    font-weight: normal;
+    text-align: right;
+}
+
+.ultima_fila {
+    text-align: center;
+    font-style: italic;
+    font-size: 14px;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}

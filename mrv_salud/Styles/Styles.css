@@ -14,11 +14,13 @@
     --shadow_sm: 0 1px 3px rgba(62, 45, 45, 0.1);
     --shadow_md: 0 4px 6px -1px rgba(0,0,0,0.1);
     --pie_color: #0B3040;
+    --verde_azulado: #0d3434;
     --color_ico: #159B94;
     --color_blanco_suave: #B5C8CE;
     --color_turquesa_claro: #72D4D0;
     --color_texto_footer: #829CA5;
     --color_blanco: #ffffff;
+    --color_blanco_perla:#d9e2e2;
     --color_borde_blanco: rgba(255, 255, 255, 0.08);
     --color_borde_footer: rgba(255, 255, 255, 0.15);
     --color_sombra: rgba(0, 0, 0, 0.1);

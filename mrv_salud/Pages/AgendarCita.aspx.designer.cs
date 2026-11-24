@@ -15,6 +15,24 @@ namespace mrv_salud.Pages
     {
 
         /// <summary>
+        /// Control txt_nombre.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_nombre;
+
+        /// <summary>
+        /// Control txt_apellido.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_apellido;
+
+        /// <summary>
         /// Control lista_genero.
         /// </summary>
         /// <remarks>
@@ -42,13 +60,13 @@ namespace mrv_salud.Pages
         protected global::System.Web.UI.WebControls.TextBox txt_fecha_nacimiento;
 
         /// <summary>
-        /// Control Text_correo.
+        /// Control txt_correo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Text_correo;
+        protected global::System.Web.UI.WebControls.TextBox txt_correo;
 
         /// <summary>
         /// Control txt_cel.

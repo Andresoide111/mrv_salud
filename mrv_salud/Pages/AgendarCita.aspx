@@ -45,7 +45,7 @@
                             <div class="campo">
 
                                 <label for="nombre"> Nombre completo: </label>
-                                <asp:TextBox ID="txt_nombre"runat="server"placeholder="Escribe tu nombre"></asp:TextBox>  
+                                <asp:TextBox ID="txt_nombre" runat="server" placeholder="Escribe tu nombre"></asp:TextBox>  
 
                             </div>
 
@@ -53,7 +53,7 @@
                             <div class="campo">
 
                                 <label for="apellido">Apellido:</label>
-                                <asp:TextBox ID="txt_apellido"runat="server"placeholder="Escribe tu apellido"></asp:TextBox>
+                                <asp:TextBox ID="txt_apellido" runat="server" placeholder="Escribe tu apellido"></asp:TextBox>
 
                             </div>
 
@@ -99,7 +99,7 @@
 
                                 <label for="email_paciente"> Correo electrónico:</label>
 
-                                <asp:TextBox ID="Text_correo"  runat="server" TextMode="Email" placeholder="Escribe tu correo electrónico">></asp:TextBox>
+                                <asp:TextBox ID="txt_correo"  runat="server" TextMode="Email" placeholder="Escribe tu correo electrónico"></asp:TextBox>
 
 
                             </div>
@@ -210,8 +210,8 @@
                         </div>
 
 
-                        <!-- Botón para enviar -->
-                        <asp:Button ID="btn_agendar" runat="server" Text="Agendar cita" CssClass="btn_enviar_cita" OnClick="btnAgendar_Click" />
+                        <!-- Botón para enviar, canvia el control asp-->
+                        <asp:Button ID="btn_agendar" runat="server" Text="Agendar cita" CssClass="btn_enviar_cita" CausesValidation="true" OnClick="btn_agendar_Click" />
                        
                     </div>
 

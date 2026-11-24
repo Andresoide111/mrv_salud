@@ -45,8 +45,7 @@
                             <div class="campo">
 
                                 <label for="nombre"> Nombre completo: </label>
-
-                                <input type="text" id="nombre"name="nombre" placeholder="Escribe tu nombre" required>
+                                <asp:TextBox ID="txt_nombre"runat="server"placeholder="Escribe tu nombre"></asp:TextBox>  
 
                             </div>
 
@@ -54,8 +53,7 @@
                             <div class="campo">
 
                                 <label for="apellido">Apellido:</label>
-
-                                <input type="text" id="apellido"name="apellido" placeholder="Escribe tu apellido"required>
+                                <asp:TextBox ID="txt_apellido"runat="server"placeholder="Escribe tu apellido"></asp:TextBox>
 
                             </div>
 
@@ -69,21 +67,17 @@
 
                                 <label for="genero"> Género: </label>
 
-                                <select id="genero" name="genero" required>
+                                <asp:DropDownList ID="lista_genero" runat="server">
 
-                                    <option value="">
-                                        Seleccione un género
-                                    </option>
+                                 <asp:ListItem Value="">Seleccione un género</asp:ListItem>
 
-                                    <option value="masculino">
-                                        Masculino
-                                    </option>
+                                  <asp:ListItem Value="masculino">Masculino</asp:ListItem>
 
-                                    <option value="femenino">
-                                        Femenino
-                                    </option>
+                                  <asp:ListItem Value="femenino">Femenino</asp:ListItem>
 
-                                </select>
+                                  </asp:DropDownList>
+
+                                <asp:Label ID="lbl_mensaje" runat="server" ForeColor="Red"></asp:Label>
 
                             </div>
 
@@ -92,8 +86,7 @@
 
                                 <label for="fecha_nacimiento"> Fecha de nacimiento: </label>
 
-                                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" placeholder="Selecciona tu fecha de nacimiento"required>
-
+                                <asp:TextBox ID="txt_fecha_nacimiento"  runat="server" TextMode="Date"></asp:TextBox>
                             </div>
 
                         </div>
@@ -106,7 +99,8 @@
 
                                 <label for="email_paciente"> Correo electrónico:</label>
 
-                                <input type="email" id="email_paciente" name="email" placeholder="Escribe tu correo electrónico" required>
+                                <asp:TextBox ID="Text_correo"  runat="server" TextMode="Email" placeholder="Escribe tu correo electrónico">></asp:TextBox>
+
 
                             </div>
 
@@ -115,7 +109,7 @@
 
                                 <label for="telefono_paciente"> Teléfono:</label>
 
-                                <input type="tel"id="telefono_paciente"name="telefono" placeholder="Escribe tu teléfono" required>
+                                <asp:TextBox ID="txt_cel" runat="server" TextMode="Phone" placeholder="Escribe tu número de celular"></asp:TextBox>
 
                             </div>
 
@@ -137,17 +131,17 @@
                             <div class="campo tipo_cita">
 
                                 <p>Tipo de cita</p>
+                                <asp:DropDownList ID="tipo_cita" runat="server">
 
-                                <select id="tipo" name="tipo_cita"required>
+                                <asp:ListItem Value="">Seleccione un tipo de cita</asp:ListItem>
 
-                                    <option value="">Seleccione un tipo de cita</option>
+                                <asp:ListItem Value="nuevo">Nuevo</asp:ListItem>
 
-                                    <option value="nuevo"> Nuevo</option>
+                                <asp:ListItem Value="subsecuente">Subsecuente</asp:ListItem>
 
-                                    <option value="subsecuente"> Subsecuente</option>
+                                </asp:DropDownList>
 
-                                </select>
-
+                                <asp:Label ID="mensaje_tipo" runat="server" ForeColor="Red"></asp:Label>
 
                             </div>
 
@@ -158,8 +152,20 @@
                                 <div class="campo">
 
                                     <label for="especialidad"> Especialidad: </label>
+                                    <asp:DropDownList ID="especialidad" runat="server">
 
-                                    <input type="text" id="especialidad" name="especialidad" placeholder="Escribe la especialidad" required>
+                                    <asp:ListItem Value="">Seleccione un tipo de cita</asp:ListItem>
+
+                                    <asp:ListItem Value="cardiologia">Cardiología</asp:ListItem>
+
+                                    <asp:ListItem Value="pedriatria">Pedriatría</asp:ListItem>
+
+                                    <asp:ListItem Value="nurologia">Neurología</asp:ListItem>
+
+                                    <asp:ListItem Value="ortopedia">Ortopedia</asp:ListItem>
+
+                                    </asp:DropDownList>
+                                    <asp:Label ID="mensaje_especialidad" runat="server" ForeColor="Red"></asp:Label>
 
                                 </div>
 
@@ -168,7 +174,11 @@
 
                                     <label for="especialista"> Especialista:</label>
 
-                                    <input type="text" id="especialista" name="especialista" placeholder="Escribe el nombre del especialista" required>
+                                    <asp:DropDownList ID="especialista" runat="server">
+
+                                    <asp:ListItem Value="">Primero seleccione una especialidad</asp:ListItem>
+
+                                    </asp:DropDownList>
 
                                 </div>
 
@@ -184,7 +194,7 @@
 
                                 <label for="fecha_cita">Fecha:</label>
 
-                                <input type="date"id="fecha_cita"name="fecha_cita"required placeholder="Selecciona la fecha de la cita">
+                                <asp:TextBox ID="txt_fecha_cita" runat="server" TextMode="Date"></asp:TextBox>
 
                             </div>
 
@@ -193,7 +203,7 @@
 
                                 <label for="horario_cita"> Horario:</label>
 
-                                <input type="text"id="horario_cita"name="horario"required placeholder="Escribe el horario de la cita">
+                                <asp:TextBox ID="txt_hora_cita" runat="server" TextMode="Time"></asp:TextBox>
 
                             </div>
 
@@ -201,10 +211,8 @@
 
 
                         <!-- Botón para enviar -->
-                        <button class="btn_enviar_cita" type="submit">
-                            Agendar cita
-                        </button>
-
+                        <asp:Button ID="btn_agendar" runat="server" Text="Agendar cita" CssClass="btn_enviar_cita" OnClick="btnAgendar_Click" />
+                       
                     </div>
 
                 </div>

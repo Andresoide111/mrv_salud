@@ -7,6 +7,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="contenido_principal" runat="server">
      <!-- aqui va el contenido que solo usa esta pagina -->
     <main class="login-page">
+        <!-- Encabezado de página -->
         <section class="login-section" aria-label="Registro en el portal de pacientes">
             <!-- Columna Izquierda: Banner informativo -->
             <aside class="login-banner">

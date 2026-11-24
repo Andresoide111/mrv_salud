@@ -72,6 +72,7 @@
     <Content Include="Images\calendario.svg" />
     <Content Include="Images\calendario_verde.svg" />
     <Content Include="Images\cardiologia.svg" />
+    <Content Include="Images\envio.svg" />
     <Content Include="Images\flecha.svg" />
     <Content Include="Images\horario.svg" />
     <Content Include="Images\icono_luna.svg" />
@@ -99,6 +100,7 @@
     <Content Include="Pages\Servicios.aspx" />
     <Content Include="Pages\Terminos_y_condiciones.aspx" />
     <Content Include="Styles\Styles.css" />
+    <Content Include="Styles\styles_contacto.css" />
     <Content Include="Styles\Styles_Default.css" />
     <Content Include="Styles\Styles_Login_Registro.css" />
     <Content Include="Styles\Styles_terminos_condiciones.css" />

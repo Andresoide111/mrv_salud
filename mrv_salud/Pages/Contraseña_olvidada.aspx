@@ -59,7 +59,8 @@
 
                     <div class="login-form">
                         <div class="campo-grupo">
-                            <label>CORREO ELECTRÓNICO O USUARIO</label>                           
+                            <label>CORREO ELECTRÓNICO O USUARIO</label> 
+                            <input type="text" id="username" name="username" required autocomplete="username" placeholder="Tu usuario o correo">
                         </div>
 
                         <button type="submit" class="btn-submit">

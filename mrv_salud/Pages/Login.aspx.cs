@@ -16,15 +16,19 @@ namespace mrv_salud.Pages
             {
                 pnlError.Visible = false;
 
-                // Si existe cookie de "Recordarme", precargar usuario
                 HttpCookie cookieUsuario = Request.Cookies["MRV_Usuario"];
                 if (cookieUsuario != null)
                 {
                     txtUsuario.Text = cookieUsuario.Value;
                     chkRecordarme.Checked = true;
                 }
+                else if (Session["UsuarioRegistrado"] != null)
+                {
+                    txtUsuario.Text = Session["UsuarioRegistrado"].ToString();
+                }
             }
         }
+
         protected void btnLogin_Click(object sender, EventArgs e)
         {
             string usuarioIngresado = txtUsuario.Text.Trim();
@@ -36,14 +40,36 @@ namespace mrv_salud.Pages
                 return;
             }
 
-            bool credencialesValidas = ValidarCredenciales(usuarioIngresado, passwordIngresada);
+            string usuarioGuardado = Session["UsuarioRegistrado"] as string;
+            string correoGuardado = Session["Correo"] as string;
+            string passwordGuardada = Session["PasswordRegistrado"] as string;
 
-            if (credencialesValidas)
+            bool esUsuarioRegistrado =
+                (!string.IsNullOrEmpty(usuarioGuardado) &&
+                 !string.IsNullOrEmpty(passwordGuardada) &&
+                 (usuarioIngresado.Equals(usuarioGuardado, StringComparison.OrdinalIgnoreCase) ||
+                  (!string.IsNullOrEmpty(correoGuardado) && usuarioIngresado.Equals(correoGuardado, StringComparison.OrdinalIgnoreCase))) &&
+                 passwordIngresada == passwordGuardada);
+
+            bool esUsuarioPredeterminado =
+                (usuarioIngresado.Equals("admin123", StringComparison.OrdinalIgnoreCase) ||
+                 usuarioIngresado.Equals("admin@mrvsalud.com", StringComparison.OrdinalIgnoreCase)) &&
+                passwordIngresada == "admin123";
+
+            if (esUsuarioRegistrado || esUsuarioPredeterminado)
             {
-                // Guardar sesión del paciente
-                Session["UsuarioLogueado"] = usuarioIngresado;
+                string nombreUsuarioActivo = esUsuarioRegistrado ? usuarioGuardado : "admin123";
 
-                // Manejar "Recordarme"
+                Session["SesionActiva"] = true;
+                Session["UsuarioActual"] = nombreUsuarioActivo;
+
+                if (esUsuarioPredeterminado && string.IsNullOrEmpty(Session["Nombre"] as string))
+                {
+                    Session["Nombre"] = "Administrador";
+                    Session["Apellido"] = "MRVSalud";
+                    Session["Correo"] = "admin@mrvsalud.com";
+                }
+
                 if (chkRecordarme.Checked)
                 {
                     HttpCookie cookie = new HttpCookie("MRV_Usuario", usuarioIngresado);
@@ -57,30 +83,21 @@ namespace mrv_salud.Pages
                     Response.Cookies.Add(cookieEliminar);
                 }
 
-                // Redirigir al inicio o panel principal
-                Response.Redirect(ResolveUrl("Default.aspx"), false);
+                Response.Redirect("Default.aspx", false);
                 Context.ApplicationInstance.CompleteRequest();
             }
             else
             {
                 MostrarError("Usuario, correo o contraseña incorrectos.");
             }
-        }
-
-        private bool ValidarCredenciales(string usuario, string password)
-        {
-            // Prueba de validación simple: usuario y contraseña correctos
-            return (usuario.Equals("admin@gmail.com", StringComparison.OrdinalIgnoreCase)
-                    || usuario.Equals("admin123", StringComparison.OrdinalIgnoreCase))
-                   && password == "12345678";
-        }
 
         private void MostrarError(string mensaje)
         {
             pnlError.Visible = true;
+            pnlError.CssClass = "mensaje-estado mensaje-error";
             lblMensaje.Text = Server.HtmlEncode(mensaje);
         }
     }
-    
-    
+
+
 }

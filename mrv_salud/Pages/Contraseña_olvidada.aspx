@@ -60,13 +60,20 @@
                     <div class="login-form">
                         <div class="campo-grupo">
                             <label>CORREO ELECTRÓNICO O USUARIO</label> 
-                            <input type="text" id="username" name="username" required autocomplete="username" placeholder="Tu usuario o correo">
+                            <asp:TextBox
+                                ID="txtUsuario"
+                                runat="server"
+                                placeholder="Tu usuario o correo"
+                                autocomplete="username" />
                         </div>
-
-                        <button type="submit" class="btn-submit">
-                            <span>Enviar instrucciones</span>
+                        <asp:LinkButton
+                                ID="btnRecuperar"
+                                runat="server"
+                                CssClass="btn-submit"
+                                OnClick="btnRecuperar_Click">
+                            <span>Recuperar contraseña</span>
                             <span aria-hidden="true">&rarr;</span>
-                        </button>
+                        </asp:LinkButton>
                     </div>
 
                     <p class="volver-login-box">

@@ -1,13 +1,11 @@
 ﻿<%@ Page Title="Login" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="mrv_salud.Pages.Login" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <!-- aqui va el enlace al css -->
     <link href="<%= ResolveUrl("~/Styles/Styles_Login_Registro.css") %>" rel="stylesheet" />
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="contenido_principal" runat="server">
-     <!-- aqui va el contenido que solo usa esta pagina -->
     <main class="login-page">
-        <!-- Encabezado de página -->
         <section class="login-section" aria-label="Acceso al portal de pacientes">
             <!-- Columna Izquierda: Banner informativo -->
             <aside class="login-banner">
@@ -54,11 +52,13 @@
                         <p>Ingresa a tu espacio personal de salud</p>
                     </div>
 
-                    <asp:Panel ID="pnlError" runat="server" Visible="false" CssClass="mensaje-error-login">
+                    <asp:Panel ID="pnlError" runat="server" Visible="false" CssClass="mensaje-estado mensaje-error">
                         <asp:Label ID="lblMensaje" runat="server"></asp:Label>
                     </asp:Panel>
+
+                    <div class="login-form">
                         <div class="campo-grupo">
-                            <label for="username">USUARIO O CORREO</label>
+                            <label for="<%= txtUsuario.ClientID %>">USUARIO O CORREO</label>
                             <asp:TextBox
                                 ID="txtUsuario"
                                 runat="server"
@@ -67,7 +67,7 @@
                         </div>
 
                         <div class="campo-grupo">
-                            <label for="password">CONTRASEÑA</label>
+                            <label for="<%= txtPassword.ClientID %>">CONTRASEÑA</label>
                             <asp:TextBox
                                 ID="txtPassword"
                                 runat="server"
@@ -77,26 +77,26 @@
                         </div>
 
                         <div class="form-opciones">
-                            <label class="checkbox-label">
+                            <div class="checkbox-label">
                                 <asp:CheckBox
                                     ID="chkRecordarme"
                                     runat="server"
                                     Text="Recordarme" />
-                            </label>
-                            <a href="<%= ResolveUrl("~/Pages/Contraseña_olvidada.aspx") %>" class="forgot-password">¿Olvidaste tu contraseña?</a>
+                            </div>
+                            <a href="<%= ResolveUrl("~/Pages/Contrasena_olvidada.aspx") %>" class="forgot-password">¿Olvidaste tu contraseña?</a>
                         </div>
 
                         <asp:LinkButton
-                                ID="btnLogin"
-                                runat="server"
-                                CssClass="btn-submit"
-                                OnClick="btnLogin_Click">
+                            ID="btnLogin"
+                            runat="server"
+                            CssClass="btn-submit"
+                            OnClick="btnLogin_Click">
                             <span>Iniciar sesión</span>
                             <span aria-hidden="true">&rarr;</span>
                         </asp:LinkButton>
-                    
+                    </div>
                 </div>
             </div>
         </section>
     </main>
-    </asp:Content>
+</asp:Content>

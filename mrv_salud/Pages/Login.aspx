@@ -54,30 +54,47 @@
                         <p>Ingresa a tu espacio personal de salud</p>
                     </div>
 
-                    <form>
+                    <asp:Panel ID="pnlError" runat="server" Visible="false" CssClass="mensaje-error-login">
+                        <asp:Label ID="lblMensaje" runat="server"></asp:Label>
+                    </asp:Panel>
                         <div class="campo-grupo">
                             <label for="username">USUARIO O CORREO</label>
-                            <input type="text" id="username" name="username" required autocomplete="username" placeholder="Tu usuario o correo">
+                            <asp:TextBox
+                                ID="txtUsuario"
+                                runat="server"
+                                placeholder="Tu usuario o correo"
+                                autocomplete="username" />
                         </div>
 
                         <div class="campo-grupo">
                             <label for="password">CONTRASEÑA</label>
-                            <input type="password" id="password" name="password" required autocomplete="current-password" placeholder="Tu contraseña">
+                            <asp:TextBox
+                                ID="txtPassword"
+                                runat="server"
+                                TextMode="Password"
+                                placeholder="Tu contraseña"
+                                autocomplete="current-password" />
                         </div>
 
                         <div class="form-opciones">
                             <label class="checkbox-label">
-                                <input type="checkbox" name="remember" id="remember">
-                                <span>Recordarme</span>
+                                <asp:CheckBox
+                                    ID="chkRecordarme"
+                                    runat="server"
+                                    Text="Recordarme" />
                             </label>
                             <a href="<%= ResolveUrl("~/Pages/Contraseña_olvidada.aspx") %>" class="forgot-password">¿Olvidaste tu contraseña?</a>
                         </div>
 
-                        <button type="submit" class="btn-submit">
+                        <asp:LinkButton
+                                ID="btnLogin"
+                                runat="server"
+                                CssClass="btn-submit"
+                                OnClick="btnLogin_Click">
                             <span>Iniciar sesión</span>
                             <span aria-hidden="true">&rarr;</span>
-                        </button>
-                    </form>
+                        </asp:LinkButton>
+                    
                 </div>
             </div>
         </section>

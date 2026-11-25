@@ -41,6 +41,16 @@ body {
     grid-template-columns: 0.9fr 1.25fr;
 }
 
+.mensaje-error-login {
+    background-color: rgba(185, 28, 28, 0.08);
+    border: 1px solid rgba(185, 28, 28, 0.3);
+    color: #991b1b;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
 /* ====================== PANEL IZQUIERDO ====================== */
 .login-banner {
     position: relative;
@@ -432,3 +442,23 @@ body {
         .volver-login-box a:hover {
             text-decoration: underline;
         }
+
+.mensaje-registro {
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    font-size: 0.86rem;
+    line-height: 1.45;
+    margin-bottom: 1rem;
+}
+
+.mensaje-registro--exito {
+    background-color: rgba(22, 140, 134, 0.12);
+    border: 1px solid rgba(22, 140, 134, 0.35);
+    color: var(--primary-color);
+}
+
+.mensaje-registro--error {
+    background-color: rgba(185, 28, 28, 0.08);
+    border: 1px solid rgba(185, 28, 28, 0.3);
+    color: #991b1b;
+}

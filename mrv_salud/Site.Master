@@ -8,14 +8,14 @@
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><!-- ENCABEZADO -->
       <title>Portal Web | Sistema de Citas | MRV Salud</title>
-      <asp:ContentPlaceHolder ID="head" runat="server"><!-- ENCABEZADO -->
+      <asp:ContentPlaceHolder ID="head" runat="server"><!-- ENCABEZADO --> 
       </asp:ContentPlaceHolder><!-- ENCABEZADO -->
        <link href="<%= ResolveUrl("~/Styles/Styles.css") %>" rel="stylesheet" />
 
 </head>
 
 <body>
-    <form id="form1" runat="server"><!-- Aquí irá el panel de anuncios -->
+    <form id="form1" runat="server"><!-- Aquí irá el panel de anuncios --> 
          <header class="site_header">
 
      <!-- Panel de información -->

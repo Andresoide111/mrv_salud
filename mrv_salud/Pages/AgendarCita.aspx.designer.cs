@@ -15,6 +15,15 @@ namespace mrv_salud.Pages
     {
 
         /// <summary>
+        /// Control lbl_mensaje.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_mensaje;
+
+        /// <summary>
         /// Control txt_nombre.
         /// </summary>
         /// <remarks>
@@ -40,15 +49,6 @@ namespace mrv_salud.Pages
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList lista_genero;
-
-        /// <summary>
-        /// Control lbl_mensaje.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_mensaje;
 
         /// <summary>
         /// Control txt_fecha_nacimiento.
@@ -78,6 +78,15 @@ namespace mrv_salud.Pages
         protected global::System.Web.UI.WebControls.TextBox txt_cel;
 
         /// <summary>
+        /// Control txt_fecha_registro.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_fecha_registro;
+
+        /// <summary>
         /// Control tipo_cita.
         /// </summary>
         /// <remarks>
@@ -87,15 +96,6 @@ namespace mrv_salud.Pages
         protected global::System.Web.UI.WebControls.DropDownList tipo_cita;
 
         /// <summary>
-        /// Control mensaje_tipo.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label mensaje_tipo;
-
-        /// <summary>
         /// Control especialidad.
         /// </summary>
         /// <remarks>
@@ -103,15 +103,6 @@ namespace mrv_salud.Pages
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList especialidad;
-
-        /// <summary>
-        /// Control mensaje_especialidad.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label mensaje_especialidad;
 
         /// <summary>
         /// Control especialista.

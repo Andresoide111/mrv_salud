@@ -35,7 +35,10 @@
 
                     <!-- SECCIÓN 1: DATOS DEL PACIENTE -->
 
+
                     <div class="datos_paciente">
+
+                         <asp:Label ID="lbl_mensaje" runat="server" ForeColor="Red"></asp:Label>
 
                         <h2>Datos del paciente</h2>
 
@@ -45,7 +48,9 @@
                             <div class="campo">
 
                                 <label for="nombre"> Nombre completo: </label>
-                                <asp:TextBox ID="txt_nombre" runat="server" placeholder="Escribe tu nombre"></asp:TextBox>  
+                                <asp:TextBox ID="txt_nombre" runat="server" placeholder="Escribe tu nombre"></asp:TextBox> 
+
+                                
 
                             </div>
 
@@ -75,9 +80,7 @@
 
                                   <asp:ListItem Value="femenino">Femenino</asp:ListItem>
 
-                                  </asp:DropDownList>
-
-                                <asp:Label ID="lbl_mensaje" runat="server" ForeColor="Red"></asp:Label>
+                                  </asp:DropDownList>               
 
                             </div>
 
@@ -128,7 +131,15 @@
 
 
                             <!-- Tipo de cita -->
-                            <div class="campo tipo_cita">
+                            <div class="campo fecha">
+
+                                <p>Fecha de registro</p>
+
+                                <asp:TextBox ID="txt_fecha_registro" runat="server" TextMode="Date" ReadOnly="true"> </asp:TextBox>
+
+                            </div>
+
+                           <div class="campo tipo_cita">
 
                                 <p>Tipo de cita</p>
                                 <asp:DropDownList ID="tipo_cita" runat="server">
@@ -141,8 +152,8 @@
 
                                 </asp:DropDownList>
 
-                                <asp:Label ID="mensaje_tipo" runat="server" ForeColor="Red"></asp:Label>
 
+                            </div>
                             </div>
 
 
@@ -165,7 +176,7 @@
                                     <asp:ListItem Value="ortopedia">Ortopedia</asp:ListItem>
 
                                     </asp:DropDownList>
-                                    <asp:Label ID="mensaje_especialidad" runat="server" ForeColor="Red"></asp:Label>
+                                  
 
                                 </div>
 
@@ -184,7 +195,7 @@
 
                             </div>
 
-                        </div>
+                        
 
 
                         <!-- Fila 5: Fecha y horario -->

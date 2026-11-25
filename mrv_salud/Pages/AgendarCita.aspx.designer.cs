@@ -60,6 +60,15 @@ namespace mrv_salud.Pages
         protected global::System.Web.UI.WebControls.TextBox txt_fecha_nacimiento;
 
         /// <summary>
+        /// Control lbl_mensaje_fecha_nacimiento.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_mensaje_fecha_nacimiento;
+
+        /// <summary>
         /// Control txt_correo.
         /// </summary>
         /// <remarks>
@@ -121,6 +130,15 @@ namespace mrv_salud.Pages
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_fecha_cita;
+
+        /// <summary>
+        /// Control lbl_mensaje_fecha_cita.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_mensaje_fecha_cita;
 
         /// <summary>
         /// Control txt_hora_cita.

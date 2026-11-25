@@ -90,6 +90,8 @@
                                 <label for="fecha_nacimiento"> Fecha de nacimiento: </label>
 
                                 <asp:TextBox ID="txt_fecha_nacimiento"  runat="server" TextMode="Date"></asp:TextBox>
+
+                                <asp:Label ID="lbl_mensaje_fecha_nacimiento" runat="server" ForeColor="Red"></asp:Label>
                             </div>
 
                         </div>
@@ -199,13 +201,13 @@
 
                                     <asp:ListItem Value="">Primero seleccione una especialidad</asp:ListItem>
 
-                                    <asp:ListItem Value="">NOMBRE DEL ESPECIALISTA</asp:ListItem>
+                                    <asp:ListItem Value="llenar con nombre">NOMBRE DEL ESPECIALISTA</asp:ListItem>
 
-                                    <asp:ListItem Value="">NOMBRE DEL ESPECIALISTA</asp:ListItem>
+                                    <asp:ListItem Value="llenar con nombre">NOMBRE DEL ESPECIALISTA</asp:ListItem>
 
-                                    <asp:ListItem Value="">NOMBRE DEL ESPECIALISTA</asp:ListItem>
+                                    <asp:ListItem Value="llenar con nombre">NOMBRE DEL ESPECIALISTA</asp:ListItem>
 
-                                     <asp:ListItem Value="">NOMBRE DEL ESPECIALISTA</asp:ListItem>
+                                     <asp:ListItem Value="llenar ">NOMBRE DEL ESPECIALISTA</asp:ListItem>
 
                                     </asp:DropDownList>
 
@@ -224,6 +226,7 @@
                                 <label for="fecha_cita">Fecha:</label>
 
                                 <asp:TextBox ID="txt_fecha_cita" runat="server" TextMode="Date"></asp:TextBox>
+                                <asp:Label ID="lbl_mensaje_fecha_cita" runat="server" ForeColor="Red"></asp:Label>
 
                             </div>
 

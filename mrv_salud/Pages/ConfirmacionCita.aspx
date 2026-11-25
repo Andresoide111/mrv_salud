@@ -36,19 +36,19 @@
                 </tr>
                 <tr>
                     <th>Nombre del paciente</th>
-                    <td>Juan Pérez</td>
+                    <td><asp:Label ID="lbl_nombre" runat="server"></asp:Label></td>
                 </tr>
                 <tr>
                     <th>Especialidad</th>
-                    <td>Cardiología</td>
+                    <td><asp:Label ID="lbl_especialidad" runat="server"></asp:Label><td>
                 </tr>
                 <tr>
                     <th>Fecha de la cita</th>
-                    <td>15 de julio de 2024</td>
+                    <td><asp:Label ID="lbl_fecha_cita" runat="server"></asp:Label></td>
                 </tr>
                 <tr>
                     <th>Horario</th>
-                    <td>10:00 a.m.</td>
+                    <td><asp:Label ID="lbl_hora" runat="server"></asp:Label></td>
                 </tr>
                
             </table>

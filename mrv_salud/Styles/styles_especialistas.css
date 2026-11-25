@@ -1,156 +1,345 @@
-:root {
-    --primary_color: #17313B;
-    --btn_main: #0F7772;
-    --btn_principal: #168C86;
-    --bg_color: #F4F5F0;
-    --surface_color: #ffffff;
-    --text_color: #0f172a;
-    --text_muted: #63767C;
-    --color_claro: #e2e8f0;
-    --shadow_sm: 0 1px 3px rgba(62, 45, 45, 0.1);
-    --shadow_md: 0 4px 12px rgba(0, 0, 0, 0.1);
+﻿:root {
+    --primary-color: #17313B;
+    --btn-main: #0F7772;
+    --btn-principal: #168C86;
+    --bg-color: #F4F5F0;
+    --surface-color: #ffffff;
+    --text-color: #0f172a;
+    --text-muted: #63767C;
+    --color-claro: #dce3e6;
+    --accent-soft: rgba(22, 140, 134, 0.12);
     --radius: 8px;
 }
 
-* {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 0;
-    background: var(--bg_color);
-    color: var(--text_color);
-    font-family: "Segoe UI", system-ui, sans-serif;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--surface-color);
+    color: var(--text-color);
     line-height: 1.5;
+    overflow-x: hidden;
 }
 
-.pagina-especialistas {
-    width: min(1180px, calc(100% - 2rem));
+.contenedor {
+    max-width: 1240px;
     margin: 0 auto;
-    padding: 3rem 0;
+    padding: 0 1.5rem;
 }
 
-.encabezado-pagina {
-    margin-bottom: 2rem;
+/* ====================== HERO / ENCABEZADO ====================== */
+.especialistas-hero {
+    background-color: var(--bg-color);
+    padding: 3.5rem 1.5rem 3rem;
     text-align: center;
 }
 
-.encabezado-pagina h1 {
-    margin: 0 0 0.5rem;
-    color: var(--primary_color);
-    font-size: clamp(1.8rem, 4vw, 2.5rem);
+.especialistas-hero__inner {
+    max-width: 720px;
+    margin: 0 auto;
 }
 
-.encabezado-pagina p {
-    margin: 0;
-    color: var(--text_muted);
+.especialistas-hero__etiqueta {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: var(--btn-principal);
+    padding-bottom: 0.35rem;
+    border-bottom: 1.5px solid var(--btn-principal);
+    margin-bottom: 1rem;
 }
 
-.especialistas-filtros {
+.especialistas-hero__titulo {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: 500;
+    font-size: clamp(2.2rem, 4.5vw, 3.35rem);
+    line-height: 1.15;
+    color: var(--primary-color);
+    margin-bottom: 0.85rem;
+}
+
+.especialistas-hero__descripcion {
+    font-size: clamp(0.92rem, 1.4vw, 1rem);
+    color: var(--text-muted);
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+/* ====================== TARJETAS DE ESPECIALISTAS ====================== */
+.especialistas-grid-section {
+    background-color: var(--surface-color);
+    padding: 3rem 1.5rem 2.5rem;
+}
+
+.filtros-especialidad {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.75rem;
+    gap: 0.5rem;
     margin-bottom: 2rem;
 }
 
-.especialistas-filtros input,
-.especialistas-filtros select {
-    min-width: min(100%, 220px);
-    min-height: 44px;
-    padding: 0.6rem 0.9rem;
-    border: 1px solid #cbd5d8;
-    border-radius: 6px;
-    background: var(--surface_color);
-    color: var(--text_color);
-    font: inherit;
+.filtro-btn {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    border: 1px solid var(--color-claro);
+    border-radius: 999px;
+    padding: 0.45rem 0.95rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
-.especialistas-filtros input:focus,
-.especialistas-filtros select:focus {
-    outline: 3px solid rgba(22, 140, 134, 0.2);
-    border-color: var(--btn_principal);
-}
+    .filtro-btn:hover {
+        border-color: var(--btn-principal);
+        color: var(--btn-principal);
+    }
+
+    .filtro-btn.activo {
+        background-color: var(--btn-principal);
+        border-color: var(--btn-principal);
+        color: #ffffff;
+    }
 
 .especialistas-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1.25rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
 }
 
 .especialista-card {
+    background-color: var(--surface-color);
+    border: 1px solid var(--color-claro);
+    border-radius: 4px;
     overflow: hidden;
-    border: 1px solid var(--color_claro);
-    border-radius: var(--radius);
-    background: var(--surface_color);
-    box-shadow: var(--shadow_sm);
+    display: flex;
+    flex-direction: column;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.especialista-card:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow_md);
-}
+    .especialista-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 24px rgba(23, 49, 59, 0.08);
+    }
 
-.especialista-foto {
-    display: block;
-    width: 100%;
+.especialista-card__foto {
     aspect-ratio: 4 / 3;
-    object-fit: cover;
-    background: #e7efec;
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--bg-color);
 }
 
-.especialista-info {
-    padding: 1.25rem;
+    .especialista-card__foto img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+        display: block;
+    }
+
+.especialista-card__cuerpo {
+    padding: 1.25rem 1.3rem 1.35rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
-.especialista-info h2 {
-    margin: 0 0 0.25rem;
-    color: var(--primary_color);
-    font-size: 1.15rem;
-}
-
-.especialista-info p {
-    margin: 0.35rem 0;
-    color: var(--text_muted);
-}
-
-.especialista-especialidad {
-    color: var(--btn_main) !important;
+.especialista-card__especialidad {
+    font-size: 0.68rem;
     font-weight: 700;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+    color: var(--btn-principal);
+    margin-bottom: 0.35rem;
 }
 
-.boton {
+.especialista-card__nombre {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    line-height: 1.25;
+    margin-bottom: 0.45rem;
+}
+
+.especialista-card__detalle {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    line-height: 1.45;
+    margin-bottom: 1.1rem;
+    flex: 1;
+}
+
+.especialista-card__enlace {
     display: inline-flex;
-    min-height: 42px;
     align-items: center;
-    justify-content: center;
-    margin-top: 0.75rem;
-    padding: 0.55rem 1rem;
-    border-radius: 6px;
-    background: var(--btn_principal);
-    color: #fff;
-    font-weight: 700;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--primary-color);
     text-decoration: none;
+    transition: color 0.2s ease, gap 0.2s ease;
 }
 
-.boton:hover {
-    background: var(--btn_main);
+    .especialista-card__enlace:hover {
+        color: var(--btn-principal);
+        gap: 0.65rem;
+    }
+
+/* ====================== TABLA DE HORARIOS ====================== */
+.horarios-section {
+    background-color: var(--surface-color);
+    padding: 2rem 1.5rem 4.5rem;
 }
 
-@media (max-width: 900px) {
+.horarios-cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.75rem;
+}
+
+.horarios-etiqueta {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--btn-principal);
+    padding-bottom: 0.3rem;
+    border-bottom: 1.5px solid var(--btn-principal);
+    margin-bottom: 0.65rem;
+}
+
+.horarios-titulo {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: 500;
+    font-size: clamp(1.85rem, 3vw, 2.5rem);
+    color: var(--primary-color);
+    line-height: 1.15;
+}
+
+.horarios-nota {
+    font-size: 0.84rem;
+    color: var(--text-muted);
+    max-width: 340px;
+}
+
+.tabla-responsive {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid var(--color-claro);
+    border-radius: 4px;
+}
+
+.tabla-horarios {
+    width: 100%;
+    min-width: 820px;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 0.82rem;
+}
+
+    .tabla-horarios thead th {
+        background-color: var(--primary-color);
+        color: #ffffff;
+        font-weight: 600;
+        padding: 0.9rem 0.75rem;
+        border-right: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+        .tabla-horarios thead th:first-child {
+            text-align: left;
+            padding-left: 1.15rem;
+        }
+
+        .tabla-horarios thead th:last-child {
+            border-right: none;
+        }
+
+    .tabla-horarios tbody td {
+        padding: 0.95rem 0.75rem;
+        border-bottom: 1px solid var(--color-claro);
+        border-right: 1px solid var(--color-claro);
+        color: var(--text-muted);
+        vertical-align: middle;
+    }
+
+        .tabla-horarios tbody td:first-child {
+            text-align: left;
+            padding-left: 1.15rem;
+        }
+
+        .tabla-horarios tbody td:last-child {
+            border-right: none;
+        }
+
+        .tabla-horarios tbody td strong {
+            display: block;
+            font-size: 0.88rem;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .tabla-horarios tbody td span {
+            display: block;
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            margin-top: 0.1rem;
+        }
+
+.fila-emergencia td {
+    text-align: left !important;
+    padding: 0.85rem 1.15rem !important;
+    background-color: rgba(22, 140, 134, 0.1);
+    color: var(--btn-main) !important;
+    font-size: 0.8rem;
+    border-bottom: 1px solid var(--color-claro);
+}
+
+.fila-pie-tabla td {
+    text-align: left !important;
+    padding: 0.7rem 1.15rem !important;
+    background-color: var(--surface-color);
+    color: var(--text-muted) !important;
+    font-size: 0.75rem;
+}
+
+/* ====================== RESPONSIVIDAD ====================== */
+@media (max-width: 1100px) {
     .especialistas-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media (max-width: 600px) {
-    .pagina-especialistas {
-        width: min(100% - 1.25rem, 1180px);
-        padding: 2rem 0;
+@media (max-width: 820px) {
+    .especialistas-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
+}
 
+@media (max-width: 540px) {
     .especialistas-grid {
         grid-template-columns: 1fr;
+    }
+
+    .especialistas-hero {
+        padding: 2.5rem 1rem 2rem;
+    }
+
+    .especialistas-grid-section,
+    .horarios-section {
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 }

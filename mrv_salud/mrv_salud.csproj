@@ -99,12 +99,13 @@
     <Content Include="Pages\Registrar.aspx" />
     <Content Include="Pages\Servicios.aspx" />
     <Content Include="Pages\Terminos_y_condiciones.aspx" />
+    <Content Include="Styles\Styles_Especialistas.css" />
     <Content Include="Styles\Style_Confirmacion_Cita.css" />
     <Content Include="Styles\Styles.css" />
-    <Content Include="Styles\styles_contacto.css" />
+    <Content Include="Styles\styles_Contacto.css" />
     <Content Include="Styles\Styles_Default.css" />
     <Content Include="Styles\Styles_Login_Registro.css" />
-    <Content Include="Styles\Styles_terminos_condiciones.css" />
+    <Content Include="Styles\Styles_Terminos_Condiciones.css" />
     <Content Include="Styles\Styles_agendar.css" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -196,6 +197,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\Andres_Mejia.webp" />
+    <Content Include="Images\Carlos_Rivera.webp" />
+    <Content Include="Images\Elena_Martinez.webp" />
+    <Content Include="Images\Fernando_Castellanos.webp" />
+    <Content Include="Images\Javier_Pineda.webp" />
+    <Content Include="Images\Lucia_Herrera.webp" />
+    <Content Include="Images\Ricardo_Zelaya.webp" />
+    <Content Include="Images\Sofia_Lopez.webp" />
+    <Content Include="Images\Valeria_Mendoza.webp" />
     <None Include="packages.config" />
     <Content Include="Site.Master" />
     <None Include="Web.Debug.config">

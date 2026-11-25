@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Terminos y Condiciones" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Terminos_y_condiciones.aspx.cs" Inherits="mrv_salud.Pages.Terminos_y_condiciones" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <!-- aqui va el enlace al css -->
-    <link href="<%= ResolveUrl("~/Styles/Styles_terminos_condiciones.css") %>" rel="stylesheet" />
+    <link href="<%= ResolveUrl("~/Styles/Styles_Terminos_Condiciones.css") %>" rel="stylesheet" />
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="contenido_principal" runat="server">

@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Contacto" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contacto.aspx.cs" Inherits="mrv_salud.Pages.Contacto" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <!-- aqui va el enlace al css -->
-    <link href="<%= ResolveUrl("~/Styles/Styles_contacto.css") %>" rel="stylesheet" />
+    <link href="<%= ResolveUrl("~/Styles/Styles_Contacto.css") %>" rel="stylesheet" />
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="contenido_principal" runat="server">

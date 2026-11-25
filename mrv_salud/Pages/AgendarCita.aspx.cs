@@ -61,19 +61,43 @@ namespace mrv_salud.Pages
                 return;
             }
 
+            //que no sea del futuro
+            if (fecha_Nacimiento > DateTime.Today)
+            {
+                ClientScript.RegisterStartupScript(
+                    this.GetType(), "alerta",
+                    "alert('La fecha de nacimiento no puede ser futura.');", true);
+                return;
+            }
+
+
             DateTime fecha_cita;
             if (!DateTime.TryParse(fechaCita, out fecha_cita)) //intenta convertir la fecha 
             { //try(intentar) parse(analizar) out(entregar)
                 return;
             }
 
-            //validar que la fecha no sea antes que hoy
             if (fecha_cita.Date < DateTime.Today)
             {
+                ClientScript.RegisterStartupScript( //reparar
+                    this.GetType(), "alerta",
+                    "alert('No puede seleccionar una fecha pasada.');", true);
                 return;
             }
 
-            //fechas aqui hay algo es que no puede ser una fecha invalida 
+            //calculamos la edad del paciente 
+            int edad = DateTime.Today.Year - fecha_Nacimiento.Year;
+
+            if (fecha_Nacimiento.Date > DateTime.Today.AddYears(-edad))
+            {
+                edad--;
+            }
+            
+
+
+
+
+
         }
     }
 }

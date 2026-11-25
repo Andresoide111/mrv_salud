@@ -165,15 +165,25 @@
                                     <label for="especialidad"> Especialidad: </label>
                                     <asp:DropDownList ID="especialidad" runat="server">
 
-                                    <asp:ListItem Value="">Seleccione un tipo de cita</asp:ListItem>
+                                    <asp:ListItem Value="">Seleccione una especialidad</asp:ListItem>
 
                                     <asp:ListItem Value="cardiologia">Cardiología</asp:ListItem>
 
-                                    <asp:ListItem Value="pedriatria">Pedriatría</asp:ListItem>
-
                                     <asp:ListItem Value="nurologia">Neurología</asp:ListItem>
 
+                                     <asp:ListItem Value="pedriatria">Pedriatría</asp:ListItem>
+
                                     <asp:ListItem Value="ortopedia">Ortopedia</asp:ListItem>
+
+                                    <asp:ListItem Value="medicina interna">Medicina Interna</asp:ListItem>
+
+                                     <asp:ListItem Value="ginecología">Ginecología</asp:ListItem>
+
+                                     <asp:ListItem Value="dermatología">Dermatología</asp:ListItem>
+
+                                     <asp:ListItem Value="urología">Urología</asp:ListItem>
+
+                                      <asp:ListItem Value="andrología">Andrología</asp:ListItem>
 
                                     </asp:DropDownList>
                                   
@@ -188,6 +198,14 @@
                                     <asp:DropDownList ID="especialista" runat="server">
 
                                     <asp:ListItem Value="">Primero seleccione una especialidad</asp:ListItem>
+
+                                    <asp:ListItem Value="">NOMBRE DEL ESPECIALISTA</asp:ListItem>
+
+                                    <asp:ListItem Value="">NOMBRE DEL ESPECIALISTA</asp:ListItem>
+
+                                    <asp:ListItem Value="">NOMBRE DEL ESPECIALISTA</asp:ListItem>
+
+                                     <asp:ListItem Value="">NOMBRE DEL ESPECIALISTA</asp:ListItem>
 
                                     </asp:DropDownList>
 

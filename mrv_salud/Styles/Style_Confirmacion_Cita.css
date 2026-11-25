@@ -32,7 +32,7 @@
     border-collapse: collapse;
     font-family: Arial, sans-serif;
     background-color: var(--color_blanco);
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 /* ENCABEZADO */
@@ -88,10 +88,43 @@
     text-align: right;
 }
 
+.btn_guardar {
+    background: var(--btn_main);
+    color: var(--color_blanco);
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 12px 20px;
+    width: 250px;
+    display: block;
+    margin: 0 auto;
+}
 .ultima_fila {
+    border-top: 15px;
     text-align: center;
     font-style: italic;
     font-size: 14px;
     background-color: var(--text-color);
     color: var(--bg-color);
+    margin-top: 15px;
 }
+
+
+@media print {
+    .btn_guardar {
+        display: none;
+    }
+}
+@media print {
+    .pie_pagina {
+        display: none;
+    }
+}
+@media print {
+    .site_header .acciones-usuario {
+        display: none;
+    }
+}
+
+
+

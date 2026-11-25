@@ -32,7 +32,7 @@
 
                 <tr>
                     <th>Código de confirmación</th>
-                    <td>ABC123XYZ</td>
+                    <td><asp:Label ID="lbl_codigo" runat="server"></asp:Label></td>
                 </tr>
                 <tr>
                     <th>Nombre del paciente</th>
@@ -52,7 +52,8 @@
                 </tr>
                
             </table>
-            <p class="ultima_fila">RECUERDE LLEGAR CON 30 MINUTOS DE ANTICIPACIÓN, PARA TOMA DE SIGNOS VITALES.</p>
+        <asp:Button ID="btn_guardar" runat="server" Text="Guardar comprobante" CssClass="btn_guardar" CausesValidation="true" OnClick="btn_guardar_Click" />
+        <p class="ultima_fila">RECUERDE LLEGAR CON 30 MINUTOS DE ANTICIPACIÓN, PARA TOMA DE SIGNOS VITALES.</p>
        
     
         

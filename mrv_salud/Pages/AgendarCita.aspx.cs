@@ -34,6 +34,8 @@ namespace mrv_salud.Pages
             string lis_especialista = especialista.SelectedValue;
             string fechaCita = txt_fecha_cita.Text;
             DateTime fechaRegistro = DateTime.Today;
+            string codigo = Guid.NewGuid().ToString("N").Substring(0, 9).ToUpper();
+
 
 
             //espacios vacios
@@ -108,6 +110,7 @@ namespace mrv_salud.Pages
             Session["HoraCita"] = txt_hora_cita.Text;
             Session["Edad"] = edad;
             Session["FechaRegistro"] = fechaRegistro;
+            Session["Codigo"] = codigo;
 
             // ir a la confirmación
             Response.Redirect("ConfirmacionCita.aspx");

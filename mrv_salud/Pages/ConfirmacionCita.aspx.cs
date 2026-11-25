@@ -20,7 +20,14 @@ namespace mrv_salud.Pages
             lbl_especialidad.Text = Session["Especialidad"].ToString();
             lbl_fecha_cita.Text = Session["FechaCita"].ToString();
             lbl_hora.Text = Session["HoraCita"].ToString();
+            lbl_codigo.Text = Session["Codigo"].ToString();
+        }
+        protected void btn_guardar_Click(object sender, EventArgs e)
+        {
+            ClientScript.RegisterStartupScript(
+            this.GetType(), "imprimir", "window.print();", true
+             );
 
         }
     }
-}
+}  

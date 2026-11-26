@@ -1,33 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
 using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace mrv_salud.Pages
 {
     public partial class Login : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            if (!IsPostBack)
-            {
-                pnlError.Visible = false;
-
-                HttpCookie cookieUsuario = Request.Cookies["MRV_Usuario"];
-                if (cookieUsuario != null)
-                {
-                    txtUsuario.Text = cookieUsuario.Value;
-                    chkRecordarme.Checked = true;
-                }
-                else if (Session["UsuarioRegistrado"] != null)
-                {
-                    txtUsuario.Text = Session["UsuarioRegistrado"].ToString();
-                }
-            }
-        }
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
@@ -70,21 +49,6 @@ namespace mrv_salud.Pages
                     Session["Correo"] = "admin@mrvsalud.com";
                 }
 
-                if (chkRecordarme.Checked)
-                {
-                    HttpCookie cookie = new HttpCookie("MRV_Usuario", usuarioIngresado);
-                    cookie.Expires = DateTime.Now.AddDays(14);
-                    Response.Cookies.Add(cookie);
-                }
-                else if (Request.Cookies["MRV_Usuario"] != null)
-                {
-                    HttpCookie cookieEliminar = new HttpCookie("MRV_Usuario");
-                    cookieEliminar.Expires = DateTime.Now.AddDays(-1);
-                    Response.Cookies.Add(cookieEliminar);
-                }
-
-                Response.Redirect("Default.aspx", false);
-                Context.ApplicationInstance.CompleteRequest();
             }
             else
             {
@@ -99,6 +63,4 @@ namespace mrv_salud.Pages
             lblMensaje.Text = Server.HtmlEncode(mensaje);
         }
     }
-
-
 }

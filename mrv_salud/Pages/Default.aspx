@@ -40,9 +40,9 @@
         </div>
 
         <div class="banner-box imagen-derecha">
-            <img src="<%= ResolveUrl("~/Images/banner-principal.jpg") %>" alt="Banner Principal" />  <!--banner principal -->
+            <img src="<%= ResolveUrl("~/Images/banner-principal.jpg") %>" alt="Banner Principal" class="banner-image" />  <!--banner principal -->
             <div class="floating-card">
-                <img src="<%= ResolveUrl("~/Images/punto.svg") %>" alt="icono" /> 
+                <img src="<%= ResolveUrl("~/Images/punto.svg") %>" alt="icono" />  
                 <div>
                     <strong>Citas disponibles hoy</strong>
                     <span>Consulta los horarios médicos</span>

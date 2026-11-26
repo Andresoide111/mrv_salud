@@ -10,7 +10,7 @@
     <!-- Banner Principal -->
     <section class="bannerprincipal">
         <div class="banner-box">
-            <span class="tag">CUIDAMOS LO QUE MÁS IMPORTA</span>
+            <span class="tag">CUIDAMOS LO QUE MÁS IMPORTA</span>   
             <h1>
                 Medicina humana.<br>
                 <span class="text-green">Atención extraordinaria.</span>

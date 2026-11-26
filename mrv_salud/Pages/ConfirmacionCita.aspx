@@ -8,7 +8,7 @@
          <!-- Títulos de la página -->
         <section class="titulos_pagina">
 
-            <p class="titulo_pequeño">RESERVA COMPLETADA</p>
+            <p class="titulo_pequeño">RESERVA COMPLETADA</p> 
 
             <p class="subtitulo_pagina">Tu cita está confirmada</p>
 

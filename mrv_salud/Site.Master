@@ -74,6 +74,11 @@
 <!-- contenedor principal -->
         <div>
             <asp:ContentPlaceHolder ID="contenido_principal" runat="server">
+
+
+
+
+
             </asp:ContentPlaceHolder>
         </div>
 

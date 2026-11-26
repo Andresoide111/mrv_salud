@@ -3,7 +3,7 @@
 
 /* Limita el ancho en pantallas muy grandes (monitores 2K/4K) */
 main {
-    max-width: 1480px;
+    max-width: auto;
     margin: 0;
 }
 

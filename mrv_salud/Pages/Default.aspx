@@ -18,8 +18,11 @@
             <p>Un equipo médico de excelencia, tecnología moderna y la calidez que tu familia merece. Tu bienestar comienza aquí.</p>
             
             <div class="banner-botones">
-                <a class="btn-agendar" href="pages/agendar_cita.html">Agendar una cita <img src="<%= ResolveUrl("~/Images/telefono.svg") %>" />
-                <a class="enlace-secundario" href="pages/especialidades.html">Conoce a nuestros médicos</a>
+                  <a class="btn-agendar" href="<%= ResolveUrl("~/Pages/AgendarCita.aspx") %>">
+              
+                 <img src="<%= ResolveUrl("~/Images/telefono.svg") %>" alt="Icono calendario" class="icono-btn">
+                 <span>Agendar una cita</span>
+             </a>
             </div>
 
             <!-- Estadísticas -->
@@ -53,8 +56,13 @@
 
     <!-- tarjetas blancas -->
     <section class="accesos-rapidos">
-        <a href="pages/agendar_cita.html" class="card-acceso"><!--revisar esta ruta -->
+                          
+
+       <a class="card-acceso" href="<%= ResolveUrl("~/Pages/AgendarCita.aspx") %>">
+        <!--revisar esta ruta -->
+
             <div class="card-icon"><img src="<%= ResolveUrl("~/Images/calendario_verde.svg") %>" alt="icono_calendario" /></div>
+
             <div>
                 <h4>Reserva en línea</h4>
                 <p>Elige médico, fecha y hora</p>
@@ -62,7 +70,8 @@
             <span class="flecha-card">&rarr;</span>
         </a>
 
-        <a href="pages/consultar-cita.html" class="card-acceso">
+
+        <a class="card-acceso" href="<%= ResolveUrl("~/Pages/ConsultarCita.aspx") %>">
             <div class="card-icon"><img src="<%= ResolveUrl("~/Images/lupa.svg") %>" alt="icono_lupa" /> </div>
             <div>
                 <h4>Consulta tu cita</h4>
@@ -71,7 +80,7 @@
             <span class="flecha-card">&rarr;</span>
         </a>
 
-        <a href="pages/contacto.html" class="card-acceso"><!--revisar esta ruta -->
+        <a class="card-acceso" href="<%= ResolveUrl("~/Pages/Contacto.aspx") %>"><!--revisar esta ruta -->
             <div class="card-icon"><img src="<%= ResolveUrl("~/Images/ubicacion.svg") %>" alt="icono" /> </div>
             <div>
                 <h4>Visítanos</h4>
@@ -94,33 +103,45 @@
                 <div class="icono-esp"><img src="<%= ResolveUrl("~/Images/cardiologia.svg") %>" alt="Cardiología" /></div>
                 <h3>Cardiología</h3>
                 <p>Prevención, diagnóstico y tratamiento integral de enfermedades cardiovasculares.</p>
-                <a href="pages/especialidades.html" class="enlace-card">Ver especialidad &rarr;</a>
+                        <a class="enlace-card" href="<%= ResolveUrl("~/Pages/Especialidades.aspx") %>">    
+                        Ver especialidad 
+                        </a>
             </div>
 
             <div class="card-especialidad">
                 <div class="icono-esp"><img src="<%= ResolveUrl("~/Images/pediatria.svg") %>" alt="Pediatría" /></div>
                 <h3>Pediatría</h3>
                 <p>Atención médica y especializada para acompañar el sano crecimiento.</p>
-                <a href="pages/especialidades.html" class="enlace-card">Ver especialidad &rarr;</a>
+                        <a class="enlace-card" href="<%= ResolveUrl("~/Pages/Especialidades.aspx") %>">    
+                        Ver especialidad 
+                        </a>
             </div>
 
             <div class="card-especialidad">
                 <div class="icono-esp"><img src="<%= ResolveUrl("~/Images/neurologia.svg") %>" alt="Neurología" /></div>
                 <h3>Neurología</h3>
                 <p>Estudio y tratamiento de las lesiones del sistema nervioso central y periférico.</p>
-                <a href="pages/especialidades.html" class="enlace-card">Ver especialidad &rarr;</a>
+                        <a class="enlace-card" href="<%= ResolveUrl("~/Pages/Especialidades.aspx") %>">   
+                        Ver especialidad 
+                        </a>
             </div>
 
             <div class="card-especialidad">
                 <div class="icono-esp"><img src="<%= ResolveUrl("~/Images/ortopedia.svg") %>" alt="Ortopedia"/></div>
                 <h3>Ortopedia</h3>
                 <p>Prevención de las lesiones del aparato locomotor y tratamiento musculoesquelético.</p>
-                <a href="pages/especialidades.html" class="enlace-card">Ver especialidad &rarr;</a>
+                        <a class="enlace-card" href="<%= ResolveUrl("~/Pages/Especialidades.aspx") %>">    
+                        Ver especialidad 
+                        </a>
             </div>
         </div>
 
         <div class="contenedor-boton-centro">
-            <a class="btn-outline" href="pages/especialidades.html">Ver todas las especialidades</a>
+
+            <a class="btn-outline" href="<%= ResolveUrl("~/Pages/Especialidades.aspx") %>">    
+            Ver todas las especialidades
+            </a>
+           
         </div>
     </section>
 

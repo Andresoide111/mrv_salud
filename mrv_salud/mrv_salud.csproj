@@ -103,6 +103,7 @@
     <Content Include="Pages\Contacto.aspx" />
     <Content Include="Pages\Contraseña_olvidada.aspx" />
     <Content Include="Pages\Default.aspx" />
+    <Content Include="Pages\Especialidades.aspx" />
     <Content Include="Pages\Especialistas.aspx" />
     <Content Include="Pages\Login.aspx" />
     <Content Include="Pages\Registrar.aspx" />
@@ -160,6 +161,13 @@
     </Compile>
     <Compile Include="Pages\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Especialidades.aspx.cs">
+      <DependentUpon>Especialidades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Especialidades.aspx.designer.cs">
+      <DependentUpon>Especialidades.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Especialistas.aspx.cs">
       <DependentUpon>Especialistas.aspx</DependentUpon>

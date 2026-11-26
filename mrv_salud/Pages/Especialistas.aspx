@@ -48,7 +48,7 @@
                             <span class="especialista-card__especialidad">CARDIOLOGÍA</span>
                             <h2 class="especialista-card__nombre">Dra. Elena Martínez</h2>
                             <p class="especialista-card__detalle">Cardióloga intervencionista · 14 años de experiencia</p>
-                            <a href="<%= ResolveUrl("~/Pages/Citas.aspx?especialista=elena-martinez") %>" class="especialista-card__enlace">
+                            <a href="<%= ResolveUrl("~/Pages/AgendarCita.aspx") %>" class="especialista-card__enlace">
                                 <span>Solicitar cita</span>
                                 <span aria-hidden="true">&rarr;</span>
                             </a>
@@ -64,7 +64,7 @@
                             <span class="especialista-card__especialidad">NEUROLOGÍA</span>
                             <h2 class="especialista-card__nombre">Dra. Sofía López</h2>
                             <p class="especialista-card__detalle">Neuróloga clínica · 9 años de experiencia</p>
-                            <a href="<%= ResolveUrl("~/Pages/Citas.aspx?especialista=sofia-lopez") %>" class="especialista-card__enlace">
+                            <a href="<%= ResolveUrl("~/Pages/AgendarCita.aspx") %>" class="especialista-card__enlace">
                                 <span>Solicitar cita</span>
                                 <span aria-hidden="true">&rarr;</span>
                             </a>
@@ -80,7 +80,7 @@
                             <span class="especialista-card__especialidad">PEDIATRÍA</span>
                             <h2 class="especialista-card__nombre">Dr. Carlos Rivera</h2>
                             <p class="especialista-card__detalle">Pediatra y neonatólogo · 11 años de experiencia</p>
-                            <a href="<%= ResolveUrl("~/Pages/Citas.aspx?especialista=carlos-rivera") %>" class="especialista-card__enlace">
+                            <a href="<%= ResolveUrl("~/Pages/AgendarCita.aspx") %>" class="especialista-card__enlace">
                                 <span>Solicitar cita</span>
                                 <span aria-hidden="true">&rarr;</span>
                             </a>
@@ -96,7 +96,7 @@
                             <span class="especialista-card__especialidad">ORTOPEDIA</span>
                             <h2 class="especialista-card__nombre">Dr. Andrés Mejía</h2>
                             <p class="especialista-card__detalle">Cirujano ortopeda · 10 años de experiencia</p>
-                            <a href="<%= ResolveUrl("~/Pages/Citas.aspx?especialista=andres-mejia") %>" class="especialista-card__enlace">
+                            <a href="<%= ResolveUrl("~/Pages/AgendarCita.aspx") %>" class="especialista-card__enlace">
                                 <span>Solicitar cita</span>
                                 <span aria-hidden="true">&rarr;</span>
                             </a>
@@ -112,7 +112,7 @@
                             <span class="especialista-card__especialidad">MEDICINA INTERNA</span>
                             <h2 class="especialista-card__nombre">Dr. Fernando Castellanos</h2>
                             <p class="especialista-card__detalle">Especialista en medicina interna · 12 años de experiencia</p>
-                            <a href="<%= ResolveUrl("~/Pages/Citas.aspx?especialista=fernando-castellanos") %>" class="especialista-card__enlace">
+                            <a href="<%= ResolveUrl("~/Pages/AgendarCita.aspx") %>" class="especialista-card__enlace">
                                 <span>Solicitar cita</span>
                                 <span aria-hidden="true">&rarr;</span>
                             </a>
@@ -128,7 +128,7 @@
                             <span class="especialista-card__especialidad">GINECOLOGÍA</span>
                             <h2 class="especialista-card__nombre">Dra. Valeria Mendoza</h2>
                             <p class="especialista-card__detalle">Ginecóloga y obstetra · 10 años de experiencia</p>
-                            <a href="<%= ResolveUrl("~/Pages/Citas.aspx?especialista=valeria-mendoza") %>" class="especialista-card__enlace">
+                            <a href="<%= ResolveUrl("~/Pages/AgendarCita.aspx") %>" class="especialista-card__enlace">
                                 <span>Solicitar cita</span>
                                 <span aria-hidden="true">&rarr;</span>
                             </a>
@@ -144,7 +144,7 @@
                             <span class="especialista-card__especialidad">DERMATOLOGÍA</span>
                             <h2 class="especialista-card__nombre">Dra. Lucía Herrera</h2>
                             <p class="especialista-card__detalle">Dermatóloga clínica y estética · 8 años de experiencia</p>
-                            <a href="<%= ResolveUrl("~/Pages/Citas.aspx?especialista=lucia-herrera") %>" class="especialista-card__enlace">
+                            <a href="<%= ResolveUrl("~/Pages/AgendarCita.aspx") %>" class="especialista-card__enlace">
                                 <span>Solicitar cita</span>
                                 <span aria-hidden="true">&rarr;</span>
                             </a>
@@ -160,7 +160,7 @@
                             <span class="especialista-card__especialidad">UROLOGÍA</span>
                             <h2 class="especialista-card__nombre">Dr. Ricardo Zelaya</h2>
                             <p class="especialista-card__detalle">Urólogo especialista · 13 años de experiencia</p>
-                            <a href="<%= ResolveUrl("~/Pages/Citas.aspx?especialista=ricardo-zelaya") %>" class="especialista-card__enlace">
+                            <a href="<%= ResolveUrl("~/Pages/AgendarCita.aspx") %>" class="especialista-card__enlace">
                                 <span>Solicitar cita</span>
                                 <span aria-hidden="true">&rarr;</span>
                             </a>
@@ -176,7 +176,7 @@
                             <span class="especialista-card__especialidad">ANDROLOGÍA</span>
                             <h2 class="especialista-card__nombre">Dr. Javier Pineda</h2>
                             <p class="especialista-card__detalle">Andrólogo y salud reproductiva masculina · 9 años de experiencia</p>
-                            <a href="<%= ResolveUrl("~/Pages/Citas.aspx?especialista=javier-pineda") %>" class="especialista-card__enlace">
+                            <a href="<%= ResolveUrl("~/Pages/AgendarCita.aspx") %>" class="especialista-card__enlace">
                                 <span>Solicitar cita</span>
                                 <span aria-hidden="true">&rarr;</span>
                             </a>

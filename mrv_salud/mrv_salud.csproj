@@ -67,27 +67,36 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\Andres_Mejia.jpg" />
     <Content Include="Images\banner-principal.jpg" />
     <Content Include="Images\banner_login.svg" />
     <Content Include="Images\calendario.svg" />
     <Content Include="Images\calendario_verde.svg" />
     <Content Include="Images\cardiologia.svg" />
+    <Content Include="Images\Carlos_Rivera.jpg" />
+    <Content Include="Images\Elena_Martinez.png" />
     <Content Include="Images\envio.svg" />
+    <Content Include="Images\Fernando_Castellanos.jpeg" />
     <Content Include="Images\flecha.svg" />
     <Content Include="Images\horario.svg" />
     <Content Include="Images\icono_luna.svg" />
     <Content Include="Images\icono_sol.svg" />
+    <Content Include="Images\Javier_Pineda.jpeg" />
     <Content Include="Images\logo-centromedico.svg" />
+    <Content Include="Images\Lucia_Herrera.jpg" />
     <Content Include="Images\lupa.svg" />
     <Content Include="Images\neurologia.svg" />
     <Content Include="Images\ortopedia.svg" />
     <Content Include="Images\pediatria.svg" />
     <Content Include="Images\punto.svg" />
+    <Content Include="Images\Ricardo_Zelaya.jpg" />
+    <Content Include="Images\Sofia_Lopez.jpg" />
     <Content Include="Images\telefono.svg" />
     <Content Include="Images\ubicacion.svg" />
     <Content Include="Images\user_lock.svg" />
     <Content Include="Images\user_pen.svg" />
     <Content Include="Images\usuario.svg" />
+    <Content Include="Images\Valeria_Mendoza.jpg" />
     <Content Include="Pages\AgendarCita.aspx" />
     <Content Include="Pages\ConfirmacionCita.aspx" />
     <Content Include="Pages\ConsultarCita.aspx" />
@@ -197,14 +206,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\Andres_Mejia.webp" />
-    <Content Include="Images\Carlos_Rivera.webp" />
-    <Content Include="Images\Elena_Martinez.webp" />
-    <Content Include="Images\Fernando_Castellanos.webp" />
-    <Content Include="Images\Javier_Pineda.webp" />
-    <Content Include="Images\Lucia_Herrera.webp" />
-    <Content Include="Images\Ricardo_Zelaya.webp" />
-    <Content Include="Images\Sofia_Lopez.webp" />
     <Content Include="Images\Valeria_Mendoza.webp" />
     <None Include="packages.config" />
     <Content Include="Site.Master" />

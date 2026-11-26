@@ -1,11 +1,10 @@
-﻿<%@ Page Title="Login" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="mrv_salud.Pages.Login" %>
+﻿<%@ Page Title="Especialistas" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Especialistas.aspx.cs" Inherits="mrv_salud.Pages.Especialistas" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <!-- aqui va el enlace al css -->
     <link href="<%= ResolveUrl("~/Styles/Styles_Especialistas.css") %>" rel="stylesheet" />
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="contenido_principal" runat="server">
-     <!-- aqui va el contenido que solo usa esta pagina -->
     <main class="especialistas-page" id="especialistas">
 
         <!-- Encabezado superior centrado sobre fondo crema -->
@@ -42,13 +41,14 @@
                     <!-- 1. Cardiología -->
                     <article class="especialista-card" data-especialidad="Cardiología">
                         <div class="especialista-card__foto">
-                            <img src="<%= ResolveUrl("~/images/Elena_Martinez.webp") %>" alt="Dra. Elena Martínez">
+                            <img src="<%= ResolveUrl("~/Images/Elena_Martinez.png") %>"
+                                alt="Dra. Elena Martínez" />
                         </div>
                         <div class="especialista-card__cuerpo">
                             <span class="especialista-card__especialidad">CARDIOLOGÍA</span>
                             <h2 class="especialista-card__nombre">Dra. Elena Martínez</h2>
                             <p class="especialista-card__detalle">Cardióloga intervencionista · 14 años de experiencia</p>
-                            <a href="../citas.html?especialista=elena-martinez" class="especialista-card__enlace">
+                            <a href="<%= ResolveUrl("~/Pages/Citas.aspx?especialista=elena-martinez") %>" class="especialista-card__enlace">
                                 <span>Solicitar cita</span>
                                 <span aria-hidden="true">&rarr;</span>
                             </a>
@@ -58,13 +58,13 @@
                     <!-- 2. Neurología -->
                     <article class="especialista-card" data-especialidad="Neurología">
                         <div class="especialista-card__foto">
-                            <img src="<%= ResolveUrl("~/images/Sofia_lopez.webp") %>" alt="Dra. Sofía López">
+                            <img src="<%= ResolveUrl("~/Images/Sofia_lopez.jpg") %>" alt="Dra. Sofía López" />
                         </div>
                         <div class="especialista-card__cuerpo">
                             <span class="especialista-card__especialidad">NEUROLOGÍA</span>
                             <h2 class="especialista-card__nombre">Dra. Sofía López</h2>
                             <p class="especialista-card__detalle">Neuróloga clínica · 9 años de experiencia</p>
-                            <a href="../citas.html?especialista=sofia-lopez" class="especialista-card__enlace">
+                            <a href="<%= ResolveUrl("~/Pages/Citas.aspx?especialista=sofia-lopez") %>" class="especialista-card__enlace">
                                 <span>Solicitar cita</span>
                                 <span aria-hidden="true">&rarr;</span>
                             </a>
@@ -74,13 +74,13 @@
                     <!-- 3. Pediatría -->
                     <article class="especialista-card" data-especialidad="Pediatría">
                         <div class="especialista-card__foto">
-                            <img src="<%= ResolveUrl("~/images/Carlos_Rivera.webp") %>" alt="Dr. Carlos Rivera">
+                            <img src="<%= ResolveUrl("~/Images/Carlos_Rivera.jpg") %>" alt="Dr. Carlos Rivera" />
                         </div>
                         <div class="especialista-card__cuerpo">
                             <span class="especialista-card__especialidad">PEDIATRÍA</span>
                             <h2 class="especialista-card__nombre">Dr. Carlos Rivera</h2>
                             <p class="especialista-card__detalle">Pediatra y neonatólogo · 11 años de experiencia</p>
-                            <a href="../citas.html?especialista=carlos-rivera" class="especialista-card__enlace">
+                            <a href="<%= ResolveUrl("~/Pages/Citas.aspx?especialista=carlos-rivera") %>" class="especialista-card__enlace">
                                 <span>Solicitar cita</span>
                                 <span aria-hidden="true">&rarr;</span>
                             </a>
@@ -90,13 +90,13 @@
                     <!-- 4. Ortopedia -->
                     <article class="especialista-card" data-especialidad="Ortopedia">
                         <div class="especialista-card__foto">
-                            <img src="<%= ResolveUrl("~/images/Andres_Mejia.webp") %>" alt="Dr. Andrés Mejía">
+                            <img src="<%= ResolveUrl("~/Images/Andres_Mejia.jpg") %>" alt="Dr. Andrés Mejía" />
                         </div>
                         <div class="especialista-card__cuerpo">
                             <span class="especialista-card__especialidad">ORTOPEDIA</span>
                             <h2 class="especialista-card__nombre">Dr. Andrés Mejía</h2>
                             <p class="especialista-card__detalle">Cirujano ortopeda · 10 años de experiencia</p>
-                            <a href="../citas.html?especialista=andres-mejia" class="especialista-card__enlace">
+                            <a href="<%= ResolveUrl("~/Pages/Citas.aspx?especialista=andres-mejia") %>" class="especialista-card__enlace">
                                 <span>Solicitar cita</span>
                                 <span aria-hidden="true">&rarr;</span>
                             </a>
@@ -106,13 +106,13 @@
                     <!-- 5. Medicina Interna -->
                     <article class="especialista-card" data-especialidad="Medicina Interna">
                         <div class="especialista-card__foto">
-                            <img src="<%= ResolveUrl("~/images/Fernando_Castellanos.webp") %>" alt="Dr. Fernando Castellanos">
+                            <img src="<%= ResolveUrl("~/Images/Fernando_Castellanos.jpeg") %>" alt="Dr. Fernando Castellanos" />
                         </div>
                         <div class="especialista-card__cuerpo">
                             <span class="especialista-card__especialidad">MEDICINA INTERNA</span>
                             <h2 class="especialista-card__nombre">Dr. Fernando Castellanos</h2>
                             <p class="especialista-card__detalle">Especialista en medicina interna · 12 años de experiencia</p>
-                            <a href="../citas.html?especialista=fernando-castellanos" class="especialista-card__enlace">
+                            <a href="<%= ResolveUrl("~/Pages/Citas.aspx?especialista=fernando-castellanos") %>" class="especialista-card__enlace">
                                 <span>Solicitar cita</span>
                                 <span aria-hidden="true">&rarr;</span>
                             </a>
@@ -122,13 +122,13 @@
                     <!-- 6. Ginecología -->
                     <article class="especialista-card" data-especialidad="Ginecología">
                         <div class="especialista-card__foto">
-                            <img src="<%= ResolveUrl("~/images/Valeria_Mendoza.webp") %>" alt="Dra. Valeria Mendoza">
+                            <img src="<%= ResolveUrl("~/Images/Valeria_Mendoza.jpg") %>" alt="Dra. Valeria Mendoza" />
                         </div>
                         <div class="especialista-card__cuerpo">
                             <span class="especialista-card__especialidad">GINECOLOGÍA</span>
                             <h2 class="especialista-card__nombre">Dra. Valeria Mendoza</h2>
                             <p class="especialista-card__detalle">Ginecóloga y obstetra · 10 años de experiencia</p>
-                            <a href="../citas.html?especialista=valeria-mendoza" class="especialista-card__enlace">
+                            <a href="<%= ResolveUrl("~/Pages/Citas.aspx?especialista=valeria-mendoza") %>" class="especialista-card__enlace">
                                 <span>Solicitar cita</span>
                                 <span aria-hidden="true">&rarr;</span>
                             </a>
@@ -138,13 +138,13 @@
                     <!-- 7. Dermatología -->
                     <article class="especialista-card" data-especialidad="Dermatología">
                         <div class="especialista-card__foto">
-                            <img src="<%= ResolveUrl("~/images/Lucia_Herrera.webp") %>" alt="Dra. Lucía Herrera">
+                            <img src="<%= ResolveUrl("~/Images/Lucia_Herrera.jpg") %>" alt="Dra. Lucía Herrera" />
                         </div>
                         <div class="especialista-card__cuerpo">
                             <span class="especialista-card__especialidad">DERMATOLOGÍA</span>
                             <h2 class="especialista-card__nombre">Dra. Lucía Herrera</h2>
                             <p class="especialista-card__detalle">Dermatóloga clínica y estética · 8 años de experiencia</p>
-                            <a href="../citas.html?especialista=lucia-herrera" class="especialista-card__enlace">
+                            <a href="<%= ResolveUrl("~/Pages/Citas.aspx?especialista=lucia-herrera") %>" class="especialista-card__enlace">
                                 <span>Solicitar cita</span>
                                 <span aria-hidden="true">&rarr;</span>
                             </a>
@@ -154,13 +154,13 @@
                     <!-- 8. Urología -->
                     <article class="especialista-card" data-especialidad="Urología">
                         <div class="especialista-card__foto">
-                            <img src="<%= ResolveUrl("~/images/Ricardo_Zelaya.webp") %>" alt="Dr. Ricardo Zelaya">
+                            <img src="<%= ResolveUrl("~/Images/Ricardo_Zelaya.jpg") %>" alt="Dr. Ricardo Zelaya" />
                         </div>
                         <div class="especialista-card__cuerpo">
                             <span class="especialista-card__especialidad">UROLOGÍA</span>
                             <h2 class="especialista-card__nombre">Dr. Ricardo Zelaya</h2>
                             <p class="especialista-card__detalle">Urólogo especialista · 13 años de experiencia</p>
-                            <a href="../citas.html?especialista=ricardo-zelaya" class="especialista-card__enlace">
+                            <a href="<%= ResolveUrl("~/Pages/Citas.aspx?especialista=ricardo-zelaya") %>" class="especialista-card__enlace">
                                 <span>Solicitar cita</span>
                                 <span aria-hidden="true">&rarr;</span>
                             </a>
@@ -170,13 +170,13 @@
                     <!-- 9. Andrología -->
                     <article class="especialista-card" data-especialidad="Andrología">
                         <div class="especialista-card__foto">
-                            <img src="<%= ResolveUrl("~/images/Javier_Pineda.webp") %>" alt="Dr. Javier Pineda">
+                            <img src="<%= ResolveUrl("~/Images/Javier_Pineda.jpeg") %>" alt="Dr. Javier Pineda" />
                         </div>
                         <div class="especialista-card__cuerpo">
                             <span class="especialista-card__especialidad">ANDROLOGÍA</span>
                             <h2 class="especialista-card__nombre">Dr. Javier Pineda</h2>
                             <p class="especialista-card__detalle">Andrólogo y salud reproductiva masculina · 9 años de experiencia</p>
-                            <a href="../citas.html?especialista=javier-pineda" class="especialista-card__enlace">
+                            <a href="<%= ResolveUrl("~/Pages/Citas.aspx?especialista=javier-pineda") %>" class="especialista-card__enlace">
                                 <span>Solicitar cita</span>
                                 <span aria-hidden="true">&rarr;</span>
                             </a>
@@ -341,4 +341,26 @@
         </section>
 
     </main>
-    </asp:Content>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const botonesFiltro = document.querySelectorAll(".filtro-btn");
+            const tarjetas = document.querySelectorAll(".especialista-card");
+
+            botonesFiltro.forEach(function (boton) {
+                boton.addEventListener("click", function () {
+                    botonesFiltro.forEach(function (b) { b.classList.remove("activo"); });
+                    boton.classList.add("activo");
+
+                    const especialidadSeleccionada = boton.dataset.especialidad;
+
+                    tarjetas.forEach(function (tarjeta) {
+                        const especialidadTarjeta = tarjeta.dataset.especialidad;
+                        const mostrar = especialidadSeleccionada === "todas" || especialidadTarjeta === especialidadSeleccionada;
+                        tarjeta.style.display = mostrar ? "" : "none";
+                    });
+                });
+            });
+        });
+    </script>
+</asp:Content>

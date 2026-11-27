@@ -32,17 +32,17 @@
 
                     <nav class="menu-perfil" aria-label="Secciones del perfil">
                         <button type="button" class="menu-perfil__item activo" data-seccion="resumen">
-                            <span class="menu-perfil__icono" aria-hidden="true">&#9783;</span>
+                            <span class="menu-perfil__icono" aria-hidden="true"</span>
                             <span>Resumen</span>
                         </button>
 
                         <button type="button" class="menu-perfil__item" data-seccion="editar">
-                            <span class="menu-perfil__icono" aria-hidden="true">&#9998;</span>
+                            <span class="menu-perfil__icono" aria-hidden="true"></span>
                             <span>Editar perfil</span>
                         </button>
 
                         <button type="button" class="menu-perfil__item" data-seccion="historial">
-                            <span class="menu-perfil__icono" aria-hidden="true">&#128197;</span>
+                            <span class="menu-perfil__icono" aria-hidden="true"></span>
                             <span>Historial de citas</span>
                         </button>
 
@@ -55,7 +55,7 @@
                             CssClass="menu-perfil__item menu-perfil__item--salir"
                             OnClick="btnCerrarSesion_Click">
                             <span>Cerrar sesión</span>
-                            <span aria-hidden="true">&rarr;</span>
+                            <span aria-hidden="true"></span>
                         </asp:LinkButton>
                     </nav>
                 </aside>

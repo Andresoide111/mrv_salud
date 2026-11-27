@@ -77,6 +77,7 @@
                                 ID="txtNombre"
                                 runat="server"
                                 placeholder="Tu nombre"
+                                required="required"
                                 autocomplete="name" />
                         </div>
 
@@ -86,6 +87,7 @@
                                 ID="txtCorreo"
                                 runat="server"
                                 TextMode="Email"
+                                required="required"
                                 placeholder="nombre@correo.com"
                                 autocomplete="email" />
                         </div>
@@ -102,7 +104,7 @@
 
                         <div class="formulario__grupo">
                             <label for="<%= ddlMotivo.ClientID %>">ASUNTO *</label>
-                            <asp:DropDownList ID="ddlMotivo" runat="server">
+                            <asp:DropDownList ID="ddlMotivo" runat="server" required="required">
                                 <asp:ListItem Text="Seleccionar asunto" Value="" Selected="True" />
                                 <asp:ListItem Text="Información de servicios" Value="Información de servicios" />
                                 <asp:ListItem Text="Ayuda con una cita" Value="Ayuda con una cita" />
@@ -115,21 +117,13 @@
                             <label for="<%= txtMensaje.ClientID %>">MENSAJE *</label>
                             <asp:TextBox
                                 ID="txtMensaje"
+                                required="required"
                                 runat="server"
                                 TextMode="MultiLine"
                                 Rows="5"
                                 placeholder="Escribe tu consulta aquí" />
                         </div>
-
-                        <asp:LinkButton
-                            ID="btnEnviar"
-                            runat="server"
-                            CssClass="boton-enviar"
-                            OnClick="btnEnviar_Click">
-                            <span>Enviar consulta</span>
-                            <img src="<%= ResolveUrl("~/Images/envio.svg") %>" alt="" aria-hidden="true" class="boton-enviar__icono" />
-                        </asp:LinkButton>
-
+                        
                         <asp:Panel
                             ID="pnlEstado"
                             runat="server"
@@ -139,6 +133,15 @@
                             aria-live="polite">
                             <asp:Label ID="lblEstado" runat="server" />
                         </asp:Panel>
+
+                        <asp:LinkButton
+                            ID="btnEnviar"
+                            runat="server"
+                            CssClass="boton-enviar"
+                            OnClick="btnEnviar_Click">
+                            <span>Enviar consulta</span>
+                            <img src="<%= ResolveUrl("~/Images/envio.svg") %>" alt="" aria-hidden="true" class="boton-enviar__icono" />
+                        </asp:LinkButton>
                     </div>
                 </div>
 

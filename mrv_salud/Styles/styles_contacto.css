@@ -44,7 +44,15 @@ body {
 }
 
 .contacto__etiqueta {
-
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: var(--btn-principal);
+    padding-top: 0.35rem;
+    border-top: 1.5px solid var(--btn-principal);
+    margin-bottom: 0.85rem;
 }
 
 .contacto__titulo {

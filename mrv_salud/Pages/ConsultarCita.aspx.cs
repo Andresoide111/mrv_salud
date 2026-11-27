@@ -13,5 +13,8 @@ namespace mrv_salud.Pages
         {
 
         }
+        protected void btn_buscar_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

@@ -1,0 +1,117 @@
+﻿
+.titulos_pagina {
+    text-align: center;
+    color: var(--text_color);
+}
+
+.titulo_pequeño {
+    margin-top: 70px;
+    margin-bottom: 13.6px;
+    display: inline-block;
+    font-size: 11.52px;
+    color: var(--btn_principal);
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    padding-top: 5.6px;
+    border-top: 1.5px solid var(--btn_principal);
+}
+
+.subtitulo_pagina {
+    font-size: 55px;
+    font-family: Georgia, serif;
+}
+
+.descripcion_pagina {
+    font-size: 14px;
+    margin-top: 0;
+}
+
+.contenedor_cita {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+    margin: 30px 1.5rem;
+}
+
+.formulario_cita {
+    width: 100%;
+    background-color: var(--surface_color);
+    border-radius: var(--radius);
+    padding: 25px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+.boton {
+    display: flex;
+    width: 100%;
+    gap:10px;
+}
+
+    .boton input[type="text"] {
+        flex: 1;
+        min-width: 0;
+        padding: 12px;
+    }
+
+.btn_buscar {
+    background: var(--btn_main);
+    color: var(--color_blanco);
+    border: none;
+    border-radius: 0 5px 5px 0;
+    font-size: 14px;
+    padding: 12px 25px;
+    cursor: pointer;
+}
+
+.panel_pasos {
+    background-color: var(--primary_color);
+    color: var(--color_blanco);
+    padding: 35px;
+    border-radius: 5px;
+    font-family: Georgia, serif;
+    font-size: 14px;
+}
+
+.paso_a_paso {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.paso_1 {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.explicacion {
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.consulta {
+    display: inline-block;
+    color: var(--color_blanco);
+    text-decoration: underline;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+
+    .contenedor_cita {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .subtitulo_pagina {
+        font-size: 38px;
+    }
+}

@@ -56,9 +56,9 @@ body {
     letter-spacing: 1.6px;
     text-transform: uppercase;
     color: var(--btn-principal);
-    padding-bottom: 0.35rem;
-    border-bottom: 1.5px solid var(--btn-principal);
-    margin-bottom: 1rem;
+    padding-top: 0.35rem;
+    border-top: 1.5px solid var(--btn-principal);
+    margin-bottom: 0.85rem;
 }
 
 .especialistas-hero__titulo {

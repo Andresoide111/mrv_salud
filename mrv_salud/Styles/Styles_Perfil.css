@@ -1,0 +1,421 @@
+﻿:root {
+    --primary-color: #17313B;
+    --btn-main: #0F7772;
+    --btn-principal: #168C86;
+    --bg-color: #F4F5F0;
+    --surface-color: #ffffff;
+    --text-color: #0f172a;
+    --text-muted: #63767C;
+    --color-claro: #dce3e6;
+    --accent-soft: rgba(22, 140, 134, 0.14);
+    --danger-color: #b91c1c;
+    --radius: 8px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--surface-color);
+    color: var(--text-color);
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+.perfil-contenedor {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Encabezado crema */
+.perfil-hero {
+    background-color: var(--bg-color);
+    padding: 3.25rem 1.5rem 2.75rem;
+    text-align: center;
+}
+
+.perfil-hero__etiqueta {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: var(--btn-principal);
+    padding-top: 0.35rem;
+    border-top: 1.5px solid var(--btn-principal);
+    margin-bottom: 0.85rem;
+}
+
+.perfil-hero__titulo {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: 500;
+    font-size: clamp(2.1rem, 4vw, 3.1rem);
+    color: var(--primary-color);
+    line-height: 1.15;
+    margin-bottom: 0.6rem;
+}
+
+.perfil-hero__subtitulo {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+}
+
+/* Layout principal */
+.perfil-cuerpo {
+    padding: 2.75rem 1.5rem 4rem;
+}
+
+.perfil-layout {
+    display: grid;
+    grid-template-columns: 265px 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+/* Sidebar */
+.perfil-sidebar {
+    background-color: var(--surface-color);
+    border: 1px solid var(--color-claro);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.tarjeta-usuario {
+    padding: 1.75rem 1.25rem 1.4rem;
+    text-align: center;
+    border-bottom: 1px solid var(--color-claro);
+}
+
+.avatar-circulo {
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    background-color: var(--accent-soft);
+    color: var(--btn-principal);
+    font-size: 1.25rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 0.9rem;
+}
+
+.usuario-nombre {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.2rem;
+}
+
+.usuario-handle {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+}
+
+.menu-perfil {
+    padding: 0.85rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.menu-perfil__item {
+    width: 100%;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.7rem 0.85rem;
+    border-radius: 6px;
+    color: var(--text-muted);
+    font-size: 0.86rem;
+    font-weight: 500;
+    text-align: left;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+    .menu-perfil__item:hover {
+        background-color: var(--bg-color);
+        color: var(--primary-color);
+    }
+
+    .menu-perfil__item.activo {
+        background-color: var(--accent-soft);
+        color: var(--btn-main);
+        font-weight: 600;
+    }
+
+.menu-perfil__separador {
+    border: none;
+    border-top: 1px solid var(--color-claro);
+    margin: 0.45rem 0;
+}
+
+.menu-perfil__item--salir {
+    color: var(--danger-color);
+}
+
+    .menu-perfil__item--salir:hover {
+        background-color: rgba(185, 28, 28, 0.08);
+        color: var(--danger-color);
+    }
+
+/* Columna derecha */
+.perfil-contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+.banner-consulta {
+    background: linear-gradient(120deg, #0b242d 0%, #102e38 100%);
+    color: #ffffff;
+    border-radius: 6px;
+    padding: 2rem 2.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.banner-consulta__etiqueta {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: #67d6cf;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid rgba(103, 214, 207, 0.6);
+    margin-bottom: 0.65rem;
+}
+
+.banner-consulta__titulo {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: 500;
+    font-size: clamp(1.45rem, 2.5vw, 1.95rem);
+    color: #ffffff;
+    margin-bottom: 0.35rem;
+}
+
+.banner-consulta__desc {
+    font-size: 0.86rem;
+    color: rgba(255, 255, 255, 0.78);
+}
+
+.btn-agendar-cita {
+    background-color: var(--btn-principal);
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.86rem;
+    font-weight: 600;
+    padding: 0.72rem 1.35rem;
+    border-radius: 5px;
+    white-space: nowrap;
+    transition: background-color 0.2s ease;
+}
+
+    .btn-agendar-cita:hover {
+        background-color: var(--btn-main);
+    }
+
+/* Cabecera de sección */
+.seccion-cabecera {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.15rem;
+}
+
+.seccion-titulo {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: 500;
+    font-size: 1.65rem;
+    color: var(--primary-color);
+    margin-bottom: 0.2rem;
+}
+
+.seccion-subtitulo {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}
+
+.enlace-editar {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--btn-main);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding-bottom: 0.2rem;
+    border-bottom: 1px solid var(--btn-principal);
+}
+
+/* Cuadrícula de datos personales */
+.tabla-datos-personales {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-top: 1px solid var(--color-claro);
+    border-left: 1px solid var(--color-claro);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.dato-celda {
+    padding: 1.25rem 1.4rem;
+    border-right: 1px solid var(--color-claro);
+    border-bottom: 1px solid var(--color-claro);
+    background-color: var(--surface-color);
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.dato-celda--full {
+    grid-column: 1 / -1;
+}
+
+.dato-etiqueta {
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.dato-valor {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* Formulario editar y mensajes */
+.form-editar-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.campo-perfil {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.campo-perfil--full {
+    grid-column: 1 / -1;
+}
+
+.campo-perfil label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.9px;
+    color: var(--text-muted);
+}
+
+.input-perfil {
+    padding: 0.7rem 0.85rem;
+    border: 1px solid var(--color-claro);
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-family: inherit;
+    color: var(--text-color);
+}
+
+.acciones-edicion {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+}
+
+.btn-primario,
+.btn-secundario {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.65rem 1.2rem;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 0.86rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-primario {
+    background-color: var(--btn-principal);
+    color: #ffffff;
+    border: none;
+}
+
+.btn-secundario {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    border: 1px solid var(--color-claro);
+}
+
+.caja-vacia-citas {
+    border: 1px solid var(--color-claro);
+    border-radius: 6px;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-muted);
+}
+
+.mensaje-estado {
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    font-size: 0.86rem;
+}
+
+.mensaje-exito {
+    background-color: rgba(22, 140, 134, 0.12);
+    border: 1px solid rgba(22, 140, 134, 0.35);
+    color: var(--primary-color);
+}
+
+.mensaje-error {
+    background-color: rgba(185, 28, 28, 0.08);
+    border: 1px solid rgba(185, 28, 28, 0.3);
+    color: var(--danger-color);
+}
+
+/* Responsividad */
+@media (max-width: 860px) {
+    .perfil-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .tabla-datos-personales,
+    .form-editar-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dato-celda--full,
+    .campo-perfil--full {
+        grid-column: auto;
+    }
+}

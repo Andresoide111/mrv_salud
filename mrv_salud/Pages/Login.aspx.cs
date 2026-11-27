@@ -49,6 +49,8 @@ namespace mrv_salud.Pages
                     Session["Correo"] = "admin@mrvsalud.com";
                 }
 
+                Response.Redirect(ResolveUrl("~/Pages/Default.aspx"), false);
+                Context.ApplicationInstance.CompleteRequest();
             }
             else
             {

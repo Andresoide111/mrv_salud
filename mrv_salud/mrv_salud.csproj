@@ -106,11 +106,13 @@
     <Content Include="Pages\Especialidades.aspx" />
     <Content Include="Pages\Especialistas.aspx" />
     <Content Include="Pages\Login.aspx" />
+    <Content Include="Pages\Perfil.aspx" />
     <Content Include="Pages\Registrar.aspx" />
     <Content Include="Pages\Servicios.aspx" />
     <Content Include="Pages\Terminos_y_condiciones.aspx" />
     <Content Include="Styles\Styles_Consultar_Cita.css" />
     <Content Include="Styles\Styles_Especialistas.css" />
+    <Content Include="Styles\Styles_Perfil.css" />
     <Content Include="Styles\Style_Confirmacion_Cita.css" />
     <Content Include="Styles\Styles.css" />
     <Content Include="Styles\styles_Contacto.css" />
@@ -183,6 +185,13 @@
     </Compile>
     <Compile Include="Pages\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Perfil.aspx.cs">
+      <DependentUpon>Perfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Perfil.aspx.designer.cs">
+      <DependentUpon>Perfil.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Registrar.aspx.cs">
       <DependentUpon>Registrar.aspx</DependentUpon>

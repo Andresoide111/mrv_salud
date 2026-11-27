@@ -1,11 +1,10 @@
-﻿<%@ Page Title="Contacto" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contacto.aspx.cs" Inherits="mrv_salud.Pages.Contacto" %>
+﻿<%@ Page Title="Contacto" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" Async="true" CodeBehind="Contacto.aspx.cs" Inherits="mrv_salud.Pages.Contacto" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <!-- aqui va el enlace al css -->
     <link href="<%= ResolveUrl("~/Styles/Styles_Contacto.css") %>" rel="stylesheet" />
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="contenido_principal" runat="server">
-     <!-- aqui va el contenido que solo usa esta pagina -->
     <main class="contacto" id="contacto">
         <!-- Encabezado superior centrado sobre fondo crema -->
         <header class="contacto__hero">
@@ -23,10 +22,10 @@
             <div class="contacto__contenedor">
 
                 <!-- Columna Izquierda: Datos de contacto y mapa/ubicación -->
-                <aside class="info-contacto">                    
+                <aside class="info-contacto">
                     <div class="info-item">
                         <div class="info-item__icono">
-                            <img src="<%= ResolveUrl("~/Images/telefono.svg") %>" class="icono-verde" alt="Icono teléfono" >
+                            <img src="<%= ResolveUrl("~/Images/telefono.svg") %>" class="icono-verde" alt="Icono teléfono" />
                         </div>
                         <div class="info-item__texto">
                             <span class="info-item__label">TELÉFONOS</span>
@@ -37,7 +36,7 @@
 
                     <div class="info-item">
                         <div class="info-item__icono">
-                            <img src="<%= ResolveUrl("~/Images/horario.svg") %>" class="icono-verde" alt="Icono horario">
+                            <img src="<%= ResolveUrl("~/Images/horario.svg") %>" class="icono-verde" alt="Icono horario" />
                         </div>
                         <div class="info-item__texto">
                             <span class="info-item__label">HORARIOS</span>
@@ -45,9 +44,10 @@
                             <p>7:00 a. m. – 7:00 p. m. · Emergencias 24/7</p>
                         </div>
                     </div>
+
                     <div class="info-item">
                         <div class="info-item__icono">
-                            <img src="<%= ResolveUrl("~/Images/ubicacion.svg") %>" alt="Icono ubicación">
+                            <img src="<%= ResolveUrl("~/Images/ubicacion.svg") %>" alt="Icono ubicación" />
                         </div>
                         <div class="info-item__texto">
                             <span class="info-item__label">DIRECCIÓN</span>
@@ -70,80 +70,82 @@
                         Déjanos tu consulta y nuestro equipo te contactará en el menor tiempo posible.
                     </p>
 
-                    <form id="formulario" class="formulario" novalidate>
+                    <div class="formulario">
                         <div class="formulario__grupo">
-                            <label for="nombre">NOMBRE COMPLETO *</label>
-                            <input
-                                type="text"
-                                id="nombre"
-                                name="nombre"
+                            <label for="<%= txtNombre.ClientID %>">NOMBRE COMPLETO *</label>
+                            <asp:TextBox
+                                ID="txtNombre"
+                                runat="server"
                                 placeholder="Tu nombre"
-                                autocomplete="name"
-                                required
-                            >
+                                required="required"
+                                autocomplete="name" />
                         </div>
 
                         <div class="formulario__grupo">
-                            <label for="correo">CORREO ELECTRÓNICO *</label>
-                            <input
-                                type="email"
-                                id="correo"
-                                name="correo"
+                            <label for="<%= txtCorreo.ClientID %>">CORREO ELECTRÓNICO *</label>
+                            <asp:TextBox
+                                ID="txtCorreo"
+                                runat="server"
+                                TextMode="Email"
+                                required="required"
                                 placeholder="nombre@correo.com"
-                                autocomplete="email"
-                                required
-                            >
+                                autocomplete="email" />
                         </div>
 
                         <div class="formulario__grupo">
-                            <label for="telefono">TELÉFONO</label>
-                            <input
-                                type="tel"
-                                id="telefono"
-                                name="telefono"
+                            <label for="<%= txtTelefono.ClientID %>">TELÉFONO</label>
+                            <asp:TextBox
+                                ID="txtTelefono"
+                                runat="server"
+                                TextMode="Phone"
                                 placeholder="+504 0000-0000"
-                                autocomplete="tel"
-                            >
+                                autocomplete="tel" />
                         </div>
 
                         <div class="formulario__grupo">
-                            <label for="motivo">ASUNTO *</label>
-                            <select id="motivo" name="motivo" required>
-                                <option value="" selected disabled>Seleccionar asunto</option>
-                                <option value="cita">Información de servicios</option>
-                                <option value="informacion">Ayuda con una cita</option>
-                                <option value="resultados">Consultar resultados</option>
-                                <option value="otro">Otro motivo</option>
-                            </select>
+                            <label for="<%= ddlMotivo.ClientID %>">ASUNTO *</label>
+                            <asp:DropDownList ID="ddlMotivo" runat="server" required="required">
+                                <asp:ListItem Text="Seleccionar asunto" Value="" Selected="True" />
+                                <asp:ListItem Text="Información de servicios" Value="Información de servicios" />
+                                <asp:ListItem Text="Ayuda con una cita" Value="Ayuda con una cita" />
+                                <asp:ListItem Text="Consultar resultados" Value="Consultar resultados" />
+                                <asp:ListItem Text="Otro motivo" Value="Otro motivo" />
+                            </asp:DropDownList>
                         </div>
 
                         <div class="formulario__grupo">
-                            <label for="mensaje">MENSAJE *</label>
-                            <textarea
-                                id="mensaje"
-                                name="mensaje"
-                                placeholder="Escribe tu consulta aquí"
-                                required
-                            ></textarea>
+                            <label for="<%= txtMensaje.ClientID %>">MENSAJE *</label>
+                            <asp:TextBox
+                                ID="txtMensaje"
+                                required="required"
+                                runat="server"
+                                TextMode="MultiLine"
+                                Rows="5"
+                                placeholder="Escribe tu consulta aquí" />
                         </div>
-
-                        <button class="boton-enviar" type="submit">
-                            <span>Enviar consulta</span>
-                            <img src="<%= ResolveUrl("~/Images/envio.svg") %>" alt="" aria-hidden="true" class="boton-enviar__icono">
-                        </button>
-
-                        <div
-                            class="mensaje-formulario"
-                            id="mensajeExito"
+                        
+                        <asp:Panel
+                            ID="pnlEstado"
+                            runat="server"
+                            Visible="false"
+                            CssClass="mensaje-formulario"
                             role="status"
-                            aria-live="polite"
-                        >
-                            Tu consulta se envió correctamente. Nuestro equipo se pondrá en contacto contigo pronto.
-                        </div>
-                    </form>
+                            aria-live="polite">
+                            <asp:Label ID="lblEstado" runat="server" />
+                        </asp:Panel>
+
+                        <asp:LinkButton
+                            ID="btnEnviar"
+                            runat="server"
+                            CssClass="boton-enviar"
+                            OnClick="btnEnviar_Click">
+                            <span>Enviar consulta</span>
+                            <img src="<%= ResolveUrl("~/Images/envio.svg") %>" alt="" aria-hidden="true" class="boton-enviar__icono" />
+                        </asp:LinkButton>
+                    </div>
                 </div>
 
             </div>
         </section>
     </main>
-    </asp:Content>
+</asp:Content>

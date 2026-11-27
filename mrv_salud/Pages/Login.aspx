@@ -83,7 +83,7 @@
                                     runat="server"
                                     Text="Recordarme" />
                             </div>
-                            <a href="<%= ResolveUrl("~/Pages/Contrasena_olvidada.aspx") %>" class="forgot-password">¿Olvidaste tu contraseña?</a>
+                            <a href="<%= ResolveUrl("~/Pages/Contraseña_olvidada.aspx") %>" class="forgot-password">¿Olvidaste tu contraseña?</a>
                         </div>
 
                         <asp:LinkButton

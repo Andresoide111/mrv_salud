@@ -32,7 +32,7 @@
                     <p>Años de experiencia</p>
                 </div>
                 <div class="stat-item">
-                    <h3>40</h3>
+                    <h3>9</h3>
                     <p>Especialistas certificados</p>
                 </div>
                 <div class="stat-item">

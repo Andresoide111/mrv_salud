@@ -305,6 +305,7 @@ body {
     text-transform: uppercase;
 }
 
+
 .pie_columna ul {
     list-style: none;
     padding: 0;
@@ -341,21 +342,21 @@ body {
 }
 
     .pie_inferior p,
-    .enlaces-legales a {
+    .enlaces_legales a {
         color: var(--color_texto_footer);
         font-size: 0.75rem;
     }
 
-.enlaces-legales {
+.enlaces_legales {
     display: flex;
     gap: 1.5rem;
 }
 
-    .enlaces-legales a {
+    .enlaces_legales a {
         text-decoration: none;
     }
 
-        .enlaces-legales a:hover {
+        .enlaces_legales a:hover {
             color: var(--color_blanco);
         }
 

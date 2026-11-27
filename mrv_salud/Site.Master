@@ -93,12 +93,14 @@
     <footer class="pie_pagina">
         <div class="pie_contenido">
             <section class="pie_nombre">
-                <a href="../index.html" class="logo_pie">
+                <div class="logo_pie">
+               
                     <span class="nombre_centro">
-                        <strong>MRV Salud</strong>
+                        <strong class="mrv">MRV Salud</strong>
                         <small>HOSPITAL &amp; CENTRO MÉDICO</small>
                     </span>
-                </a>
+                
+                </div>
 
                 <p>
                     Medicina de excelencia con la calidez y cercanía
@@ -109,18 +111,18 @@
             <section class="pie_columna">
                 <h3>PORTAL</h3>
                 <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="especialidades.html">Especialidades</a></li>
-                    <li><a href="especialistas.html">Especialistas</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="<%= ResolveUrl("~/Pages/Default.aspx") %>">Inicio</a></li>
+                    <li><a href="<%= ResolveUrl("~/Pages/Especialidades.aspx") %>">Especialidades</a></li>
+                    <li><a href="<%= ResolveUrl("~/Pages/Especialistas.aspx") %>">Especialistas</a></li>
+                    <li><a href="<%= ResolveUrl("~/Pages/Contacto.aspx") %>">Contacto</a></li>
                 </ul>
             </section>
 
             <section class="pie_columna">
                 <h3>PACIENTES</h3>
                 <ul>
-                    <li><a href="agendar_cita.html">Agendar cita</a></li>
-                    <li><a href="consultar-cita.html">Consultar cita</a></li>
+                    <li><a href="<%= ResolveUrl("~/Pages/AgendarCita.aspx") %>">Agendar cita</a></li>
+                    <li><a href="<%= ResolveUrl("~/Pages/ConsultarCita.aspx") %>">Consultar cita</a></li>
                 </ul>
             </section>
 
@@ -141,9 +143,8 @@
                 Todos los derechos reservados.
             </p>
 
-            <div class="enlaces-legales">
-                <a href="#">Privacidad</a>
-                <a href="#">Términos de uso</a>
+            <div class="enlaces_legales">
+                <a href="<%= ResolveUrl("~/Pages/Terminos_y_condiciones.aspx") %>">Términos de uso</a>
             </div>
         </div>
     </footer>

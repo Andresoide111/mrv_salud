@@ -44,15 +44,7 @@ body {
 }
 
 .contacto__etiqueta {
-    display: inline-block;
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 1.6px;
-    text-transform: uppercase;
-    color: var(--btn-principal);
-    padding-top: 0.35rem;
-    border-top: 1.5px solid var(--btn-principal);
-    margin-bottom: 0.85rem;
+
 }
 
 .contacto__titulo {
@@ -301,7 +293,6 @@ body {
     }
 
 .mensaje-formulario {
-    display: none;
     padding: 0.85rem 1rem;
     border-radius: 6px;
     background-color: rgba(22, 140, 134, 0.14);

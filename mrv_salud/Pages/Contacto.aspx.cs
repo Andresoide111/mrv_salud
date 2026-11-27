@@ -31,6 +31,11 @@ namespace mrv_salud.Pages
                 MostrarEstado("Por favor completa todos los campos obligatorios marcados con *.", true);
                 return;
             }
+            else if (!correoCliente.Contains("@"))
+            {
+                MostrarEstado("Por favor ingresa un correo electrónico válido.", true);
+                return;
+            }
 
             string asuntoRespuesta = $"Re: {motivo} — MRV Salud";
             string telefonoTexto = string.IsNullOrEmpty(telefono) ? "No especificado" : telefono;

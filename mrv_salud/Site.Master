@@ -58,10 +58,12 @@
                  <span>Agendar una cita</span>
              </a>
 
-             <a class="btn-login" href="<%= ResolveUrl("~/Pages/Login.aspx") %>">
-                 <img src="<%= ResolveUrl("~/Images/usuario.svg") %>" alt="Icono usuario" class="icono-login">
-                 <span>Inicia sesión</span>
-             </a>
+            <asp:HyperLink ID="hlCuentaUsuario" runat="server"
+                CssClass="btn-login"
+                NavigateUrl="~/Pages/Login.aspx">
+                <img src="<%= ResolveUrl("~/Images/usuario.svg") %>" alt="Icono usuario" class="icono-login" />
+                <span><asp:Literal ID="litTextoBotonCuenta" runat="server" Text="Inicia sesión" /></span>
+            </asp:HyperLink>
              <!-- son las tres lineas que aparecen solo en las pantallas pequeñas para desplegar el menu de nav -->
              <button type="button" class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
                  <span></span>

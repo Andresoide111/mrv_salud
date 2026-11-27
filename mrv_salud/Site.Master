@@ -38,7 +38,7 @@
      <div class="encabezado">
          <!-- Logo -->
          <a href="<%= ResolveUrl("~/Pages/Default.aspx") %>">
-         <img  src="<%= ResolveUrl("~/Images/logo-centromedico.svg") %>"alt="Logo Centro Médico MRV Salud" class="logo-hospital" height="50"/>
+         <img  src="<%= ResolveUrl("~/Images/logo-centromedico.svg") %>"alt="Logo Centro Médico MRV Salud" class="logo-hospital" height="90"/>
          </a>
 
          <!-- Menú de navegación -->

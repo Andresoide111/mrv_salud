@@ -204,7 +204,7 @@
             const btnCancelarEdicion = document.getElementById("btnCancelarEdicion");
             const btnGuardarCambios = document.getElementById("btnGuardarCambiosJS");
 
-            // Asegura que el nombre de usuario siempre tenga el prefijo "@" al mostrarse
+            // Asegura que el nombre de usuario siempre tenga el "@" al mostrarse
             function formatearHandle(userStr) {
                 if (!userStr) return "@usuario";
                 return userStr.startsWith("@") ? userStr : "@" + userStr;

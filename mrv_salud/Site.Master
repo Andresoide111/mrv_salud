@@ -21,7 +21,7 @@
      <!-- Panel de información -->
          <div class="panel_anuncio">
              <div class="panel">
-             <a href="contacto.html">
+             <a href="<%= ResolveUrl("~/Pages/Contacto.aspx") %>">
                  <img src="<%= ResolveUrl("~/Images/telefono.svg") %>" /><!-- Panel de información -->
                  <span>Emergencias: <strong>+504 2234-5555</strong></span>
              </a>

@@ -71,6 +71,38 @@
     cursor: pointer;
 }
 
+.resultado_consulta {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.panel_resultado {
+    width: 100%;
+    max-width: 650px;
+    padding: 25px;
+    background-color:var(--bg_color);
+    
+    border-radius: var(--radius);
+}
+.detalles_cita {
+    text-align: center;
+    text-align: center;
+    font-size:25px;
+}
+
+.cuadro_datos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+.cuadro_datos {
+    background-color: var(--color_claro);
+    border-radius:var(--radius);
+    padding:20px;
+}
+
 .panel_pasos {
     background-color: var(--primary_color);
     color: var(--color_blanco);

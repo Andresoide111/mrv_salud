@@ -141,11 +141,10 @@
             <p>
                 &copy; 2026 Centro médico MRV Salud.
                 Todos los derechos reservados.
-            </p>
-
-            <div class="enlaces_legales">
+            </p> 
+                
                 <a href="<%= ResolveUrl("~/Pages/Terminos_y_condiciones.aspx") %>">Términos de uso</a>
-            </div>
+            
         </div>
     </footer>
 

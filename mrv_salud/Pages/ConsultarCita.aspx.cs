@@ -15,6 +15,36 @@ namespace mrv_salud.Pages
         }
         protected void btn_buscar_Click(object sender, EventArgs e)
         {
+            //primero recuperar lo escrito por el usuario
+            string codigo = txt_cod.Text.Trim();
+            //recuperar el codigo que genero
+            string codigo_guardado = Session["Codigo"]?.ToString();
+
+
+            if (string.IsNullOrWhiteSpace(txt_cod.Text))
+            {
+                lbl_mensaje_consulta.Text = "Ingrese su código.";
+                return;
+            }
+
+            // ver si el código coincide
+            if (codigo == codigo_guardado)
+            {
+                lbl_nombre.Text = "Nombre: " + Session["Nombre"].ToString();
+                lbl_especialidad.Text = "Especialidad: " + Session["Especialidad"].ToString();
+                lbl_especialista.Text = "Especialista: " + Session["Especialista"].ToString();
+                lbl_fecha.Text = "Fecha: " + Session["FechaCita"].ToString();
+                lbl_hora.Text = "Hora: " + Session["HoraCita"].ToString();
+                lbl_codigo.Text = "Código: " + Session["Codigo"].ToString();
+                lbl_estado.Text = "Estado: Pendiente";
+
+                panel_resultado.Visible = true;
+            }
+            else
+            {
+                lbl_mensaje_consulta.Text = "No se encontró ninguna cita con ese código.";
+                panel_resultado.Visible = false;
+            }
         }
     }
 }

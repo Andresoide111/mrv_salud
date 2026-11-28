@@ -33,7 +33,7 @@
 
                 <div class="boton">
 
-                    <asp:TextBox ID="txt_apellido" runat="server" placeholder="Ejemplo: SL-A1B2C3D4"></asp:TextBox>
+                    <asp:TextBox ID="txt_cod" runat="server" placeholder="Ejemplo: SL-A1B2C3D4"></asp:TextBox>
 
                     <asp:Button ID="btn_buscar" runat="server" Text="Consultar" CssClass="btn_buscar" CausesValidation="true" OnClick="btn_buscar_Click" />
 
@@ -42,6 +42,36 @@
                 <small>El código aparece en la parte superior de tu comprobante.</small>
 
             </div>
+            
+<!-- cuadro de los resultados, es panel para que se esconda-->
+        <div class="resultado_consulta">
+
+    <asp:Label ID="lbl_mensaje_consulta" runat="server"></asp:Label>
+
+    <asp:Panel ID="panel_resultado" runat="server" Visible="false">
+
+        <p class="detalles_cita">DETALLES DE LA CITA</p>
+
+        <div class="cuadro_datos">
+
+        <asp:Label ID="lbl_nombre" runat="server"></asp:Label>
+
+        <asp:Label ID="lbl_especialidad" runat="server"></asp:Label>
+
+        <asp:Label ID="lbl_especialista" runat="server"></asp:Label>
+
+        <asp:Label ID="lbl_fecha" runat="server"></asp:Label>
+
+        <asp:Label ID="lbl_hora" runat="server"></asp:Label>
+
+        <asp:Label ID="lbl_codigo" runat="server"></asp:Label>
+
+        <asp:Label ID="lbl_estado" runat="server"></asp:Label>
+        </div>
+
+    </asp:Panel>
+
+</div>
 
         </div>
 
@@ -67,6 +97,7 @@
             </aside>
 
         </div>
+
 
     </div>
 

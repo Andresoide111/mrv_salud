@@ -320,7 +320,7 @@ body {
 }
 
 .pie_columna a {
-    color: var(--color_blanco_suave);
+    color: var(--color_blanco_suave) !important;
     text-decoration: none;
     transition: color 0.2s ease;
 }
@@ -341,24 +341,18 @@ body {
     gap: 1rem;
 }
 
-    .pie_inferior p,
-    .enlaces_legales a {
+ .pie_inferior p {
         color: var(--color_texto_footer);
         font-size: 0.75rem;
-    }
-
-.enlaces_legales {
-    display: flex;
-    gap: 1.5rem;
-}
-
-    .enlaces_legales a {
         text-decoration: none;
     }
 
-        .enlaces_legales a:hover {
-            color: var(--color_blanco);
-        }
+    .pie_inferior a {
+        color: var(--color_texto_footer);
+        text-decoration: none;
+        font-size: 0.75rem;
+    }
+
 
 /* ====================== RESPONSIVIDAD ====================== */
 @media (max-width: 1024px) {

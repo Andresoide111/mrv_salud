@@ -145,6 +145,7 @@ namespace mrv_salud.Pages
                 "Resumen de tu solicitud:\n" +
                 $"- Código de cita: {Session["Codigo"]}\n" +
                 $"- Nombre de quien solicita: {nombre} {apellido}\n" +
+                $"- DNI: {dni}\n" +
                 $"- Tipo de cita: {tipoCita}\n" +
                 $"- Especialidad: {lis_especialidad}\n" +
                 $"- Especialista: {lis_especialista}\n" +

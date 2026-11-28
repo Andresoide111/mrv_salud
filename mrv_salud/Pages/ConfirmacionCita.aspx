@@ -40,7 +40,7 @@
                 </tr>
                 <tr>
                     <th>Especialidad</th>
-                    <td><asp:Label ID="lbl_especialidad" runat="server"></asp:Label><td>
+                    <td><asp:Label ID="lbl_especialidad" runat="server"></asp:Label></td>
                 </tr>
                 <tr>
                     <th>Fecha de la cita</th>

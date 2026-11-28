@@ -310,6 +310,9 @@
 
             const cita = <%= ObtenerCitaJson() %>;
             const contenedorHistorial = document.getElementById("contenedorHistorial");
+            const nombrePaciente = (cita && cita.nombre) || usuario.nombre || "";
+            const apellidoPaciente = (cita && cita.apellido) || usuario.apellido || "";
+            const dniPaciente = (cita && cita.dni) || usuario.dni || "No registrado";
 
             if (contenedorHistorial) {
                 if (cita) {
@@ -319,11 +322,13 @@
                     <span class="tarjeta-cita__codigo">Código: ${cita.codigo}</span>
                     <span class="tarjeta-cita__estado">Confirmada</span>
                 </div>
-                <h3>${cita.especialidad} — ${cita.especialista}</h3>
-                <p><strong>Tipo:</strong> ${cita.tipoCita}</p>
-                <p><strong>Fecha y hora:</strong> ${cita.fechaCita} a las ${cita.horaCita}</p>
-                <p><small>Registrada el: ${cita.fechaRegistro}</small></p>
-            </div>
+                    <p><strong>Paciente:</strong> ${(nombrePaciente + " " + apellidoPaciente).trim()}</p>
+                    <p><strong>DNI:</strong> ${dniPaciente}</p>
+                    <h3>${cita.especialidad} — ${cita.especialista}</h3>
+                    <p><strong>Tipo:</strong> ${cita.tipoCita}</p>
+                    <p><strong>Fecha y hora:</strong> ${cita.fechaCita} a las ${cita.horaCita}</p>
+                    <p><small>Registrada el: ${cita.fechaRegistro}</small></p>
+                </div>
         `;
                 } else {
                     contenedorHistorial.innerHTML = `

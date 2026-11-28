@@ -22,6 +22,7 @@ namespace mrv_salud.Pages
             string correo = Session["Correo"] as string;
             string telefono = (Session["Telefono"] ?? Session["Celular"]) as string;
             string usuario = (Session["UsuarioActual"] ?? Session["UsuarioRegistrado"]) as string;
+            string dni = Session["DNI"] as string;
 
             if (string.IsNullOrWhiteSpace(nombre))
                 nombre = !string.IsNullOrWhiteSpace(usuario) ? usuario : "User";
@@ -36,7 +37,8 @@ namespace mrv_salud.Pages
                 nacimiento = nacimiento ?? "",
                 usuario = usuario,
                 correo = correo ?? "",
-                telefono = telefono ?? ""
+                telefono = telefono ?? "",
+                dni = dni ?? ""
             };
 
             JavaScriptSerializer serializer = new JavaScriptSerializer();
@@ -70,6 +72,9 @@ namespace mrv_salud.Pages
             var cita = new
             {
                 codigo = Session["Codigo"]?.ToString() ?? "",
+                nombre = (Session["NombreCita"] ?? Session["Nombre"])?.ToString() ?? "",
+                apellido = (Session["ApellidoCita"] ?? Session["Apellido"])?.ToString() ?? "",
+                dni = (Session["DniCita"] ?? Session["DNI"])?.ToString() ?? "",
                 tipoCita = Session["TipoCita"]?.ToString() ?? "",
                 especialidad = Session["Especialidad"]?.ToString() ?? "",
                 especialista = Session["Especialista"]?.ToString() ?? "",

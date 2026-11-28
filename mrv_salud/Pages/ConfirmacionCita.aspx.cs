@@ -11,12 +11,12 @@ namespace mrv_salud.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string nombre = Session["Nombre"].ToString();
+            string nombre = Session["NombreCita"].ToString();
             string apellido = Session["Apellido"].ToString();
             string fecha = Session["FechaCita"].ToString();
             string especialidad = Session["Especialidad"].ToString();
 
-            lbl_nombre.Text = Session["Nombre"].ToString() + " " + Session["Apellido"].ToString();
+            lbl_nombre.Text = Session["NombreCita"].ToString() + " " + Session["Apellido"].ToString();
             lbl_especialidad.Text = Session["Especialidad"].ToString();
             lbl_fecha_cita.Text = Session["FechaCita"].ToString();
             lbl_hora.Text = Session["HoraCita"].ToString();

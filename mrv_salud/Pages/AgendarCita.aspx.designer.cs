@@ -78,6 +78,15 @@ namespace mrv_salud.Pages
         protected global::System.Web.UI.WebControls.TextBox txt_correo;
 
         /// <summary>
+        /// Control lbl_mensaje_correo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_mensaje_correo;
+
+        /// <summary>
         /// Control txt_cel.
         /// </summary>
         /// <remarks>
@@ -156,6 +165,6 @@ namespace mrv_salud.Pages
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_agendar;
+        protected global::System.Web.UI.WebControls.LinkButton btn_agendar;
     }
 }

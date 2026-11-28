@@ -173,13 +173,20 @@
     }
 
 .btn_enviar_cita {
-    background: var(--btn_main);
-    color: var(--color_blanco);
+    margin-top: 0.4rem;
+    align-self: flex-start;
+    background-color: var(--btn_principal);
+    color: #ffffff;
     border: none;
-    border-radius: 5px;
-    font-size: 14px;
-    padding: 12px 20px;
-    width: 250px;
+    border-radius: 6px;
+    padding: 0.85rem 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.15s ease;
 }
 
 /* PANEL LATERAL*/

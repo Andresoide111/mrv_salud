@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -16,7 +19,7 @@ namespace mrv_salud.Pages
             txt_fecha_registro.Text = DateTime.Today.ToString("yyyy-MM-dd");
 
         }
-        protected void btn_agendar_Click(object sender, EventArgs e)
+        protected async void btn_agendar_Click(object sender, EventArgs e)
         { //los limpia cada vez uque se ejecuta el evento
             lbl_mensaje.Text = "";
             lbl_mensaje_fecha_nacimiento.Text = "";
@@ -87,6 +90,23 @@ namespace mrv_salud.Pages
                 return;
             }
 
+            try
+            {
+                var direccion = new MailAddress(correo);
+
+                if (direccion.Address != correo)
+                {
+                    lbl_mensaje_correo.Text =
+                        "Ingrese un correo electrónico válido.";
+                    return;
+                }
+            }
+            catch (FormatException)
+            {
+                lbl_mensaje_correo.Text =
+                    "Ingrese un correo electrónico válido.";
+                return;
+            }
 
             //calculamos la edad del paciente 
             int edad = DateTime.Today.Year - fecha_nacimiento.Year;
@@ -112,13 +132,75 @@ namespace mrv_salud.Pages
             Session["FechaRegistro"] = fechaRegistro;
             Session["Codigo"] = codigo;
 
-            // ir a la confirmación
-            Response.Redirect("ConfirmacionCita.aspx");
+            //enviar correo de confirmacion al paciente
+            string asuntoRespuesta = $"Confirmación de cita - {codigo}";
 
+            string cuerpoRespuesta =
+                $"Hola {nombre}.\n\n" +
+                "Tu cita se agendó correctamente.\n\n" +
+                "Resumen de tu solicitud:\n" +
+                $"- Código de cita: {Session["Codigo"]}\n" +
+                $"- Nombre de quien solicita: {nombre} {apellido}\n" +
+                $"- Tipo de cita: {tipoCita}\n" +
+                $"- Especialidad: {lis_especialidad}\n" +
+                $"- Especialista: {lis_especialista}\n" +
+                $"- Teléfono: {celular}\n" +
+                $"- Fecha de la cita: {fechaCita}\n" +
+                "Atentamente,\n" +
+                "MRV Salud";
 
+            try
+            {
+                await EnviarMensaje(
+                    correo,
+                    asuntoRespuesta,
+                    cuerpoRespuesta
+                );
 
-
-
+                // Redirigir después de completar el envío.
+                Response.Redirect("ConfirmacionCita.aspx", false);
+                Context.ApplicationInstance.CompleteRequest();
+            }
+            catch (Exception ex)
+            {
+                lbl_mensaje.Text =
+                    "No se pudo enviar el correo de confirmación. " +
+                    "Detalle: " + ex.Message;
+            }
         }
+
+        //Declaración del método para enviar el correo electrónico de confirmación
+        private async Task EnviarMensaje(string emailDestinatario, string asunto, string cuerpo)
+        {
+            var nuestroEmail = ConfigurationManager.AppSettings["CONFIG_EMAIL:EMAIL"];
+            var password = ConfigurationManager.AppSettings["CONFIG_EMAIL:PASSWORD"];
+            var host = ConfigurationManager.AppSettings["CONFIG_EMAIL:HOST"];
+            var puertoTexto = ConfigurationManager.AppSettings["CONFIG_EMAIL:PUERTO"];
+
+            if (string.IsNullOrWhiteSpace(nuestroEmail) ||
+                string.IsNullOrWhiteSpace(password) ||
+                string.IsNullOrWhiteSpace(host) ||
+                string.IsNullOrWhiteSpace(puertoTexto))
+            {
+                throw new InvalidOperationException("Faltan claves CONFIG_EMAIL en Web.config.");
+            }
+
+            int puerto = int.Parse(puertoTexto);
+
+            using (var smtpCliente = new SmtpClient(host, puerto))
+            {
+                smtpCliente.EnableSsl = true;
+                smtpCliente.UseDefaultCredentials = false;
+                smtpCliente.Timeout = 15000;
+                smtpCliente.Credentials = new NetworkCredential(nuestroEmail, password);
+
+                using (var mensaje = new MailMessage(nuestroEmail, emailDestinatario, asunto, cuerpo))
+                {
+                    await smtpCliente.SendMailAsync(mensaje);
+                }
+            }
+        }
+
+
     }
 }

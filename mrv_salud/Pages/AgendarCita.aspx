@@ -1,4 +1,4 @@
-﻿<%@ Page Title="AgendarCita" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AgendarCita.aspx.cs" Inherits="mrv_salud.Pages.AgendarCita" %>
+﻿<%@ Page Title="AgendarCita" Language="C#" MasterPageFile="~/Site.Master" Async="true" AutoEventWireup="true" CodeBehind="AgendarCita.aspx.cs" Inherits="mrv_salud.Pages.AgendarCita" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="<%= ResolveUrl("~/Styles/Styles_agendar.css") %>" rel="stylesheet" />
 </asp:Content>
@@ -47,7 +47,7 @@
 
                             <div class="campo">
 
-                                <label for="nombre"> Nombre completo: </label>
+                                <label for="nombre"> Nombre: </label>
                                 <asp:TextBox ID="txt_nombre" runat="server" placeholder="Escribe tu nombre"></asp:TextBox> 
 
                                 
@@ -105,6 +105,8 @@
                                 <label for="email_paciente"> Correo electrónico:</label>
 
                                 <asp:TextBox ID="txt_correo"  runat="server" TextMode="Email" placeholder="Escribe tu correo electrónico"></asp:TextBox>
+
+                                <asp:Label ID="lbl_mensaje_correo" runat="server" ForeColor="Red"></asp:Label>
 
 
                             </div>
@@ -243,8 +245,13 @@
 
 
                         <!-- Botón para enviar, canvia el control asp-->
-                        <asp:Button ID="btn_agendar" runat="server" Text="Agendar cita" CssClass="btn_enviar_cita" CausesValidation="true" OnClick="btn_agendar_Click" />
-                       
+                        <asp:LinkButton
+                            ID="btn_agendar"
+                            runat="server"
+                            CssClass="btn_enviar_cita"
+                            OnClick="btn_agendar_Click">
+                            <span>Agendar cita</span>
+                        </asp:LinkButton>
                     </div>
 
                 </div>

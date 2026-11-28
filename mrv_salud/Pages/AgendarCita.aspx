@@ -33,7 +33,7 @@
                 <div class="formulario">
 
 
-                    <!-- SECCIÓN 1: DATOS DEL PACIENTE -->
+                    <!-- datos del usuario -->
 
 
                     <div class="datos_paciente">
@@ -64,9 +64,19 @@
 
                         </div>
 
+                         <div class="fila_2">
 
-                        <!-- Fila 2: Género y fecha de nacimiento -->
-                        <div class="fila_2">
+                            <div class="campo">
+
+                                <label for="nombre"> DNI: </label>
+                                <asp:TextBox ID="txt_identidad" runat="server" placeholder="Escribe tu DNI sin espacios."></asp:TextBox> 
+
+                            </div>
+
+                        </div>
+
+                        <!-- Fila 3 fecha de nacimiento -->
+                        <div class="fila_3">
 
                             <div class="campo">
 
@@ -97,8 +107,8 @@
                         </div>
 
 
-                        <!-- Fila 3: Correo y teléfono -->
-                        <div class="fila_3">
+                        <!-- correo y teléfono -->
+                        <div class="fila_4">
 
                             <div class="campo">
 
@@ -130,11 +140,11 @@
                         <h2>Datos de la cita</h2>
 
 
-                        <!-- Fila 4: Tipo de cita y especialidades -->
-                        <div class="fila_6">
+                        <!-- especialidades -->
+                        <div class="fila_5">
 
 
-                            <!-- Tipo de cita -->
+                            <!-- tipo de cita -->
                             <div class="campo fecha">
 
                                 <p>Fecha de registro</p>
@@ -161,33 +171,34 @@
                             </div>
 
 
-                            <!-- Especialidad y especialista -->
-                            <div class="fila_7">
+                           
+                            <div class="fila_6">
 
                                 <div class="campo">
 
-                                    <label for="especialidad"> Especialidad: </label>
-                                    <asp:DropDownList ID="especialidad" runat="server">
+                                    <label for="especialidad"> Especialidad: </label><!-- AutoPostBack actualiza la pagina cada que el usuario cambia, este es
+                                        como el nombre del metodo que se ejecuta cuando se cambia la seleccion-->
+                                    <asp:DropDownList ID="especialidad" runat="server"  AutoPostBack="true" OnSelectedIndexChanged="especialidad_SelectedIndexChanged">
 
                                     <asp:ListItem Value="">Seleccione una especialidad</asp:ListItem>
 
-                                    <asp:ListItem Value="cardiologia">Cardiología</asp:ListItem>
+                                    <asp:ListItem Value="Cardiologia">Cardiología</asp:ListItem>
 
-                                    <asp:ListItem Value="nurologia">Neurología</asp:ListItem>
+                                    <asp:ListItem Value="Neurologia">Neurología</asp:ListItem>
 
-                                     <asp:ListItem Value="pedriatria">Pedriatría</asp:ListItem>
+                                     <asp:ListItem Value="Pedriatria">Pedriatría</asp:ListItem>
 
-                                    <asp:ListItem Value="ortopedia">Ortopedia</asp:ListItem>
+                                    <asp:ListItem Value="Ortopedia">Ortopedia</asp:ListItem>
 
-                                    <asp:ListItem Value="medicina interna">Medicina Interna</asp:ListItem>
+                                    <asp:ListItem Value="Medicina interna">Medicina Interna</asp:ListItem>
 
-                                     <asp:ListItem Value="ginecología">Ginecología</asp:ListItem>
+                                     <asp:ListItem Value="Ginecología">Ginecología</asp:ListItem>
 
-                                     <asp:ListItem Value="dermatología">Dermatología</asp:ListItem>
+                                     <asp:ListItem Value="Dermatología">Dermatología</asp:ListItem>
 
-                                     <asp:ListItem Value="urología">Urología</asp:ListItem>
+                                     <asp:ListItem Value="Urología">Urología</asp:ListItem>
 
-                                      <asp:ListItem Value="andrología">Andrología</asp:ListItem>
+                                      <asp:ListItem Value="Andrología">Andrología</asp:ListItem>
 
                                     </asp:DropDownList>
                                   
@@ -201,15 +212,7 @@
 
                                     <asp:DropDownList ID="especialista" runat="server">
 
-                                    <asp:ListItem Value="">Primero seleccione una especialidad</asp:ListItem>
-
-                                    <asp:ListItem Value="llenar con nombre">NOMBRE DEL ESPECIALISTA</asp:ListItem>
-
-                                    <asp:ListItem Value="llenar con nombre">NOMBRE DEL ESPECIALISTA</asp:ListItem>
-
-                                    <asp:ListItem Value="llenar con nombre">NOMBRE DEL ESPECIALISTA</asp:ListItem>
-
-                                     <asp:ListItem Value="llenar ">NOMBRE DEL ESPECIALISTA</asp:ListItem>
+                                    <asp:ListItem Value="">Primero seleccione una especialidad.</asp:ListItem>
 
                                     </asp:DropDownList>
 
@@ -220,8 +223,8 @@
                         
 
 
-                        <!-- Fila 5: Fecha y horario -->
-                        <div class="fila_8">
+                        <!-- fecha y horario -->
+                        <div class="fila_7">
 
                             <div class="campo">
 
@@ -244,12 +247,9 @@
                         </div>
 
 
-                        <!-- Botón para enviar, canvia el control asp-->
+                        <!--  enviar, canvia el control asp-->
                         <asp:LinkButton
-                            ID="btn_agendar"
-                            runat="server"
-                            CssClass="btn_enviar_cita"
-                            OnClick="btn_agendar_Click">
+                            ID="btn_agendar" runat="server" CssClass="btn_enviar_cita" OnClick="btn_agendar_Click">
                             <span>Agendar cita</span>
                         </asp:LinkButton>
                     </div>

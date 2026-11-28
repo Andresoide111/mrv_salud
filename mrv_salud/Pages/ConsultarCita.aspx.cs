@@ -30,7 +30,8 @@ namespace mrv_salud.Pages
             // ver si el código coincide
             if (codigo == codigo_guardado)
             {
-                lbl_nombre.Text = "Nombre: " + Session["Nombre"].ToString();
+                lbl_nombre.Text = "Nombre: " + Session["NombreCita"].ToString() + " " + Session["Apellido"].ToString();
+                lbl_dni.Text = "DNI: " + Session["DNI"].ToString();
                 lbl_especialidad.Text = "Especialidad: " + Session["Especialidad"].ToString();
                 lbl_especialista.Text = "Especialista: " + Session["Especialista"].ToString();
                 lbl_fecha.Text = "Fecha: " + Session["FechaCita"].ToString();

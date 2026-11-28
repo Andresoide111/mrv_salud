@@ -56,6 +56,8 @@
 
         <asp:Label ID="lbl_nombre" runat="server"></asp:Label>
 
+        <asp:Label ID="lbl_dni" runat="server"></asp:Label>
+
         <asp:Label ID="lbl_especialidad" runat="server"></asp:Label>
 
         <asp:Label ID="lbl_especialista" runat="server"></asp:Label>

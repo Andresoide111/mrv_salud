@@ -36,6 +36,7 @@ namespace mrv_salud.Pages
             string lis_especialidad = especialidad.SelectedValue;
             string lis_especialista = especialista.SelectedValue;
             string fechaCita = txt_fecha_cita.Text;
+            string dni = txt_identidad.Text;
             DateTime fechaRegistro = DateTime.Today;
             string codigo = Guid.NewGuid().ToString("N").Substring(0, 9).ToUpper();
 
@@ -130,10 +131,13 @@ namespace mrv_salud.Pages
             Session["HoraCita"] = txt_hora_cita.Text;
             Session["Edad"] = edad;
             Session["FechaRegistro"] = fechaRegistro;
+            Session["DNI"] = dni;
             Session["Codigo"] = codigo;
 
-            //enviar correo de confirmacion al paciente
-            string asuntoRespuesta = $"Confirmación de cita - {codigo}";
+
+
+        //enviar correo de confirmacion al paciente
+        string asuntoRespuesta = $"Confirmación de cita - {codigo}";
 
             string cuerpoRespuesta =
                 $"Hola {nombre}.\n\n" +
@@ -168,6 +172,60 @@ namespace mrv_salud.Pages
                     "Detalle: " + ex.Message;
             }
         }
+
+        //filtrar con las propiedades
+        protected void especialidad_SelectedIndexChanged(object sender, EventArgs e) //evento que se ejecuta cuando recibe el value
+        {
+            especialista.Items.Clear();
+
+            if (especialidad.SelectedValue == "Cardiologia")
+            {
+                especialista.Items.Add(new ListItem("Dr. Alejandro Mendoza"));
+
+            }
+            else if (especialidad.SelectedValue == "Neurologia")
+            {
+                especialista.Items.Add(new ListItem("Dra. Mariana Castellanos"));
+
+            }
+            else if (especialidad.SelectedValue == "Pedriatria")
+            {
+                especialista.Items.Add(new ListItem("Dra. Sofía Herrera "));
+
+            }
+            else if (especialidad.SelectedValue == "Ortopedia")
+            {
+                especialista.Items.Add(new ListItem("Dr. Ricardo Mejía"));
+
+            }
+            else if (especialidad.SelectedValue == "Medicina interna")
+            {
+                especialista.Items.Add(new ListItem("Dr. Fernando Zelaya "));
+
+            }
+            else if (especialidad.SelectedValue == "Ginecología")
+            {
+                especialista.Items.Add(new ListItem("Dra. Gabriela Reyes "));
+
+            }
+            else if (especialidad.SelectedValue == "Dermatología")
+            {
+                especialista.Items.Add(new ListItem("Dra. Valeria Paz "));
+
+            }
+            else if (especialidad.SelectedValue == "Urología")
+            {
+                especialista.Items.Add(new ListItem("Dr. Andrés Flores"));
+
+            }
+            else if (especialidad.SelectedValue == "Andrología")
+            {
+                especialista.Items.Add(new ListItem("Dr. Carlos Lagos"));
+
+            }
+        }
+
+
 
         //Declaración del método para enviar el correo electrónico de confirmación
         private async Task EnviarMensaje(string emailDestinatario, string asunto, string cuerpo)

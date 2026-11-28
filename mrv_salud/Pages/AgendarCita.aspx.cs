@@ -97,11 +97,11 @@ namespace mrv_salud.Pages
             }
 
             //guardar de forma temporal con sesion 
-            Session["Nombre"] = nombre;
+            Session["NombreCita"] = nombre;
             Session["Apellido"] = apellido;
             Session["Genero"] = lis_genero;
-            Session["Nacimiento"] = nacimiento;
-            Session["Correo"] = correo;
+            Session["NacimientoCita"] = nacimiento;
+            Session["CorreoCita"] = correo;
             Session["Celular"] = celular;
             Session["TipoCita"] = tipoCita;
             Session["Especialidad"] = lis_especialidad;

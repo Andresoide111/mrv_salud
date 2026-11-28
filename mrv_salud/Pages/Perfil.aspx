@@ -32,7 +32,7 @@
 
                     <nav class="menu-perfil" aria-label="Secciones del perfil">
                         <button type="button" class="menu-perfil__item activo" data-seccion="resumen">
-                            <span class="menu-perfil__icono" aria-hidden="true"</span>
+                            <span class="menu-perfil__icono" aria-hidden="true"></span>
                             <span>Resumen</span>
                         </button>
 
@@ -87,9 +87,9 @@
                                 <p class="seccion-subtitulo">Datos asociados a tu cuenta.</p>
                             </div>
                             <button type="button" class="enlace-editar" id="btnEditarRapido">
-                                <span aria-hidden="true">&#9998;</span>
+                                <span aria-hidden="true"></span>
                                 <span>Editar</span>
-                            </button>
+                            </button>  
                         </div>
 
                         <div class="tabla-datos-personales">
@@ -173,12 +173,8 @@
                             </div>
                         </div>
 
-                        <div class="caja-vacia-citas">
-                            <p>Aún no tienes citas registradas.</p>
-                            <a href="<%= ResolveUrl("~/Pages/AgendarCita.aspx") %>" class="btn-primario">Agendar mi primera cita</a>
-                        </div>
+                        <div id="contenedorHistorial"></div>
                     </section>
-
                 </div>
             </div>
         </section>
@@ -311,6 +307,30 @@
 
             // Carga inicial de los datos al abrir la página
             renderizarUsuario();
+
+            const cita = <%= ObtenerCitaJson() %>;
+            const contenedorHistorial = document.getElementById("contenedorHistorial");
+
+            if (contenedorHistorial) {
+                if (cita) {
+                    contenedorHistorial.innerHTML = `
+            <div class="tarjeta-cita">
+                <div class="tarjeta-cita__header">
+                    <span class="tarjeta-cita__codigo">Código: ${cita.codigo}</span>
+                    <span class="tarjeta-cita__estado">Confirmada</span>
+                </div>
+                <h3>${cita.especialidad} — ${cita.especialista}</h3>
+                <p><strong>Tipo:</strong> ${cita.tipoCita}</p>
+                <p><strong>Fecha y hora:</strong> ${cita.fechaCita} a las ${cita.horaCita}</p>
+                <p><small>Registrada el: ${cita.fechaRegistro}</small></p>
+            </div>
+        `;
+                } else {
+                    contenedorHistorial.innerHTML = `
+            <p class="texto-vacio">No tienes citas registradas asociadas a tu correo electrónico.</p>
+        `;
+                }
+            }
         });
     </script>
 </asp:Content>

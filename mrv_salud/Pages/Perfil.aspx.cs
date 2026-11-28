@@ -51,5 +51,34 @@ namespace mrv_salud.Pages
             Response.Redirect(ResolveUrl("Default.aspx"), false);
             Context.ApplicationInstance.CompleteRequest();
         }
+        public string ObtenerCitaJson()
+        {
+            string correoLogueado = (Session["Correo"] as string ?? "").Trim().ToLowerInvariant();
+            string correoCita = (Session["CorreoCita"] as string ?? "").Trim().ToLowerInvariant();
+
+            // Verifica que exista una cita agendada y que ambos correos coincidan
+            bool coincide = !string.IsNullOrEmpty(correoLogueado) &&
+                            !string.IsNullOrEmpty(correoCita) &&
+                            correoLogueado == correoCita &&
+                            Session["Codigo"] != null;
+
+            if (!coincide)
+            {
+                return "null";
+            }
+
+            var cita = new
+            {
+                codigo = Session["Codigo"]?.ToString() ?? "",
+                tipoCita = Session["TipoCita"]?.ToString() ?? "",
+                especialidad = Session["Especialidad"]?.ToString() ?? "",
+                especialista = Session["Especialista"]?.ToString() ?? "",
+                fechaCita = Session["FechaCita"]?.ToString() ?? "",
+                horaCita = Session["HoraCita"]?.ToString() ?? "",
+                fechaRegistro = Session["FechaRegistro"]?.ToString() ?? ""
+            };
+
+            return new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(cita);
+        }
     }
 }
